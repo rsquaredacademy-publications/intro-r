@@ -71,73 +71,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<!-- GA4 with GDPR consent-first loading (Measurement ID G-W92F847S2X).
-     Phase 0 decision: GA4. No tracking request is made until the visitor
-     clicks "Accept". Choice persists in localStorage ("intro-r-consent").
-     Declining (or ignoring) means gtag.js is never loaded. -->
-<script>
-  (function () {
-    var MEASUREMENT_ID = "G-W92F847S2X";
-    var STORAGE_KEY = "intro-r-consent";
-
-    function loadGtag() {
-      var s = document.createElement("script");
-      s.async = true;
-      s.src = "https://www.googletagmanager.com/gtag/js?id=" + MEASUREMENT_ID;
-      document.head.appendChild(s);
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      window.gtag = gtag;
-      gtag("js", new Date());
-      gtag("config", MEASUREMENT_ID);
-    }
-
-    function hideBanner() {
-      var banner = document.getElementById("consent-banner");
-      if (banner) banner.remove();
-    }
-
-    try {
-      var choice = localStorage.getItem(STORAGE_KEY);
-      if (choice === "granted") {
-        loadGtag();
-        return; // returning visitor who already accepted: no banner
-      }
-      if (choice === "denied") return; // returning visitor who declined: stay silent
-    } catch (e) { /* storage unavailable: fall through and show banner */ }
-
-    // First visit (or no stored choice): show banner once the DOM is ready.
-    function showBanner() {
-      if (document.getElementById("consent-banner")) return;
-      var banner = document.createElement("div");
-      banner.id = "consent-banner";
-      banner.setAttribute("role", "dialog");
-      banner.setAttribute("aria-live", "polite");
-      banner.setAttribute("aria-label", "Cookie consent");
-      banner.innerHTML =
-        "<p>This site uses Google Analytics to understand visits. " +
-        "No tracking loads unless you accept.</p>" +
-        '<p><button id="consent-accept" type="button">Accept</button> ' +
-        '<button id="consent-decline" type="button">Decline</button></p>';
-      document.body.appendChild(banner);
-      document.getElementById("consent-accept").onclick = function () {
-        try { localStorage.setItem(STORAGE_KEY, "granted"); } catch (e) {}
-        hideBanner();
-        loadGtag();
-      };
-      document.getElementById("consent-decline").onclick = function () {
-        try { localStorage.setItem(STORAGE_KEY, "denied"); } catch (e) {}
-        hideBanner();
-      };
-    }
-
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", showBanner);
-    } else {
-      showBanner();
-    }
-  })();
-</script>
+<!-- Rsquared site-kit v1.0.1: GA4 + region-based consent. Kit files are vendored in site-kit/. -->
+<link rel="stylesheet" href="./site-kit/rsa-consent.css">
+<script src="./site-kit/rsa-analytics.js" data-ga-id="G-2QSPEL5WM6" async=""></script>
 <meta property="og:image" content="https://intro-r.rsquaredacademy.com/img/og-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -342,6 +278,7 @@ ul.task-list li input[type="checkbox"] {
   <p>Free and open — enjoy the full book online. Explore more at
   <a href="https://ebooks.rsquaredacademy.com">ebooks.rsquaredacademy.com</a>
   and <a href="https://www.rsquaredacademy.com">Rsquared Academy</a>.</p>
+  <p>We use Google Analytics 4 to understand how people use this site (pages visited, referring sites, device type and approximate location) so we can improve our free learning material. Google Analytics uses cookies and a pseudonymous identifier; we don't use it for advertising and we never send Google names or email addresses. Visitors in the European Economic Area, the United Kingdom and Switzerland are asked for consent first, and if they decline, no analytics cookies are stored. Anyone can switch analytics off at any time: <a href="#" data-rsa-analytics-optout="">Turn off analytics</a>.</p>
 </footer>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
