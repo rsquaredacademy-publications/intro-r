@@ -8,6 +8,11 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
+[[headers]]
+  for = "/site-kit/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
 # 10 Legacy Bookdown chapter redirects (relative paths ensure portability across domains & Netlify deploy previews)
 [[redirects]]
   from = "/intro.html"

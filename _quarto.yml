@@ -8,6 +8,7 @@ project:
     - "img/og-card.png"
     - "img/*.webp"
     - "data-webr/*.csv"
+    - site-kit
 
 quarto-required: ">=1.6.0"
 sitemap: true
@@ -65,7 +66,7 @@ format:
     code-copy: true
     code-overflow: wrap
     include-in-header:
-      - _ga_partial.html
+      - includes/site-kit-head.html
       - meta-og.html
     include-after-body: footer.html
   pdf:
