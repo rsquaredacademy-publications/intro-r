@@ -57,6 +57,7 @@ format:
     # template's callout definitions for PDF/ePub output.
     filters:
       - webr
+      - includes/rsa-signup.lua
     theme:
       light: flatly
       dark: darkly
