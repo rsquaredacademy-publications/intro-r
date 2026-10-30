@@ -176,6 +176,26 @@ They differ in nine places. The eBooks follow one of each; this guide does not c
 
 ---
 
+## 3a. Aravind's decisions (2026-10-30)
+
+All approved as recommended ("all OK"):
+
+1. **Contractions:** keep the written style: "let us", no contractions.
+2. **First person singular:** none in the eBooks ("we" throughout).
+3. **Pointing to output:** "In the example below" replaces "in the below example"; "here you can see" sparingly.
+4. **Chapter endings:** end on the rule, then a pointer to the matching course lesson ("Practise this in Intro to R,
+   lesson 6").
+5. **Rule of thumb:** one "whenever you want X, use Y" line per section.
+6. **Agendas:** keep the bulleted syllabus at the head of a chapter (findability, checklist 17).
+7. **Rhythm:** the written rhythm: short sentences, paragraphs of one to three sentences.
+8. **Spoken tics** ("right?", "so here", "now") stay out of print.
+9. **When an example goes wrong:** calm and explanatory, as the books already are.
+10. **Conflict 3, spelling:** "learned", not "learnt" (US spelling, C115), so the eBook matches the courses.
+11. **Conflict 8:** "let us" for walk-throughs; imperatives for one-line instructions.
+12. **Conflict 10, humour:** rare, light lines are fine; no jokes for their own sake.
+13. **Content the courses leave out** goes in where it fits: `F:/pm/notes/2026-10-30-style-audit/ebook-content-list.md`
+    (e.g. partial argument names in the functions chapter).
+
 ## 4. Conflicts between the slices
 
 Listed, not resolved.
