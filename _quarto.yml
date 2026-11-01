@@ -5,7 +5,7 @@ project:
     - "robots.txt"
     - "google02e424888b5e2def.html"
     - "404.html"
-    - "img/og-card.png"
+    - "img/social-card.png"
     - "img/*.webp"
     - "data-webr/*.csv"
     - site-kit
@@ -18,6 +18,23 @@ book:
   author: "Aravind Hebbali"
   date: last-modified
   description: "A beginner-friendly introduction to the R programming language."
+  site-url: https://intro-r.rsquaredacademy.com
+  image: img/social-card.png
+  image-alt: "Introduction to R: a beginner-friendly introduction to the R programming language."
+  open-graph:
+    site-name: Rsquared Academy
+    image: img/social-card.png
+    image-alt: "Introduction to R: a beginner-friendly introduction to the R programming language."
+  twitter-card:
+    card-style: summary_large_image
+    site: "@rsquaredacademy"
+    image: img/social-card.png
+    image-alt: "Introduction to R: a beginner-friendly introduction to the R programming language."
+  repo-url: https://github.com/rsquaredacademy-publications/intro-r/
+  navbar:
+    right:
+      - text: "GitHub"
+        href: https://github.com/rsquaredacademy-publications/intro-r/
   chapters:
     - index.qmd
     - about-the-author.qmd
@@ -35,17 +52,6 @@ book:
     - first-plot.qmd
     - first-wrangle.qmd
   downloads: [pdf, epub]
-
-website:
-  site-url: https://intro-r.rsquaredacademy.com
-  description: "A beginner-friendly introduction to the R programming language."
-  open-graph: true
-  twitter-card: true
-  repo-url: https://github.com/rsquaredacademy-publications/intro-r/
-  navbar:
-    right:
-      - text: "GitHub"
-        href: https://github.com/rsquaredacademy-publications/intro-r/
 
 execute:
   warning: false
@@ -68,7 +74,6 @@ format:
     code-overflow: wrap
     include-in-header:
       - includes/site-kit-head.html
-      - meta-og.html
     include-after-body: footer.html
   pdf:
     documentclass: scrreprt
