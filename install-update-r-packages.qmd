@@ -68,7 +68,7 @@ install.packages('quantstrat', repos = 'https://r-forge.r-project.org/')
 Now that we have learnt how to install packages, let us look at installing different versions of the same package.
 
 ```{r install7, eval=FALSE}
-remotes::install_version('dplyr', version = 0.5.0)
+remotes::install_version('dplyr', version = "0.5.0")
 ```
 
 If you want to install the latest release from GitHub, append `@*release` to the repository name. For example, to install the latest release of dplyr:
