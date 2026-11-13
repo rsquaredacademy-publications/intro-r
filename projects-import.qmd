@@ -17,10 +17,9 @@ library(here)
 ## Why avoid `setwd()`
 
 `setwd("C:/Users/you/project")` hard-codes a path that exists only on your
-machine. Anyone else who opens the script — or you on a different computer —
-gets an error. An RStudio Project (`.Rproj`) fixes this: opening the `.Rproj`
+machine. Anyone opening the script on a different computer gets an error. An RStudio Project (`.Rproj`) fixes this: opening the `.Rproj`
 file sets the working directory to the project folder automatically, so
-relative paths just work.
+relative paths work.
 
 **Workflow:** File → New Project → New Directory (or Existing Directory) →
 give it a name. From then on, open the `.Rproj` file, not individual scripts.
@@ -50,7 +49,7 @@ students
 
 ## Reading Excel files
 
-`read_excel()` works the same way for `.xlsx` files — sheet 1 by default:
+`read_excel()` works the same way for `.xlsx` files. It reads sheet 1 by default:
 
 ```{r read-excel}
 students_xl <- read_excel(here("data", "students.xlsx"))

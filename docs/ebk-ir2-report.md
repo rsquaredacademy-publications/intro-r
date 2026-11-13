@@ -22,6 +22,7 @@ No new teaching content, headings, exercises or course links are added.
 | Vectors in R | `vectors-in-r.qmd` | 32 | 32 |
 | Dataframes in R | `data-frames-in-r.qmd` | 3 | 3 |
 | Install & Update R Packages | `install-update-r-packages.qmd` | 2 | 2 |
+| RStudio Projects & Data Import | `projects-import.qmd` | 3 | 3 |
 
 ## Preface
 
@@ -150,6 +151,16 @@ Refusals: The short definition, inspection chunks and column/row demos stay. Hea
 | `install-update-r-packages.qmd:37` | 9 | Use `update.packages()` to check for and install updates to your installed packages. | Use `update.packages()` to check for and install package updates. |
 
 Refusals: The install-once/load-each-session distinction and the missing-package remedy already read plainly. The quotation warning stays. No package sources or reference material are moved back from the appendix.
+
+## RStudio Projects & Data Import
+
+| file:line | principle | before | after |
+| --- | --- | --- | --- |
+| `projects-import.qmd:20` | 3, 13 | Anyone else who opens the script — or you on a different computer — gets an error. | Anyone opening the script on a different computer gets an error. |
+| `projects-import.qmd:23` | 9 | relative paths just work. | relative paths work. |
+| `projects-import.qmd:53` | 13 | `read_excel()` works the same way for `.xlsx` files — sheet 1 by default: | `read_excel()` works the same way for `.xlsx` files. It reads sheet 1 by default: |
+
+Refusals: The concrete path example, workflow instructions, here explanation, file names and path warning stay. The browser lead-in, cell, first-run timing note and Practice Checks remain verbatim. No import methods, package-installation steps or new data checks are added.
 
 ## Validation and remaining work
 
