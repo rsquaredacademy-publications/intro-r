@@ -89,9 +89,9 @@ runtime downloads once, on this page only.
 
 ```{webr-r}
 students <- data.frame(
-  name = c("Asha", "Ravi", "Meera", "Arjun"),
-  age = c(21, 22, 20, 23),
-  graduate = c(TRUE, TRUE, FALSE, TRUE)
+  name = c("John", "Jack", "Jill"),
+  age = c(29, 25, 27),
+  graduate = c(TRUE, TRUE, FALSE)
 )
 
 # rows and columns independently
