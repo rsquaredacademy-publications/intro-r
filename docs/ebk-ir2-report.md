@@ -18,6 +18,7 @@ No new teaching content, headings, exercises or course links are added.
 | Introduction to R | `introduction-to-r.qmd` | 2 | 2 |
 | Install R & RStudio | `install-r-and-rstudio.qmd` | 2 | 2 |
 | Variables in R | `variables-in-r.qmd` | 13 | 13 |
+| Data Types in R | `data-types-in-r.qmd` | 14 | 14 |
 
 ## Preface
 
@@ -67,6 +68,27 @@ Refusals: The short numbered-by-sequence installation instructions and Console c
 | `variables-in-r.qmd:84` | 3, 9 | - If the name is made of more than one word, use underscore to separate the words. | - If the name contains more than one word, use underscores to separate the words. |
 
 Refusals: The opening orientation, permission to skip, Let us case study, radius/pi explanation, hand-off to Using Variables, numbers and naming warnings remain. No Environment/ls()/rm() content is added.
+
+## Data Types in R
+
+| file:line | principle | before | after |
+| --- | --- | --- | --- |
+| `data-types-in-r.qmd:12` | 18 | and recognise `POSIXct` for date-times. | and recognize `POSIXct` for date-times. |
+| `data-types-in-r.qmd:22` | 1 | In R, numbers are represented by the data type `numeric`. | In R, we represent numbers with the data type `numeric`. |
+| `data-types-in-r.qmd:22` | 9 | Next we will learn a few methods of checking the type of the variable. | Next we will learn how to check the type of the variable. |
+| `data-types-in-r.qmd:38` | 4, 9 | If you carefully observe, `integers` are also treated as `numeric/double`. | In the example above, R also treats `integers` as `numeric/double`. |
+| `data-types-in-r.qmd:38` | 4, 11 | In the meanwhile, we have introduced two new functions in the above example: | We used two new functions in the example above: |
+| `data-types-in-r.qmd:45` | 11 | In this section, we will learn to create variables of the type `integer` and to convert other data types to `integer`. | Let us create variables of the type `integer` and convert other data types to `integer`. |
+| `data-types-in-r.qmd:71` | 1, 3 | Letters, words and group of words are represented by the data type `character`. | We represent letters, words and groups of words with the data type `character`. |
+| `data-types-in-r.qmd:71` | 1, 18 | All data of type `character` must be enclosed in single or double quotation marks. | We enclose data of type `character` in single or double quotes. |
+| `data-types-in-r.qmd:71` | 1, 3 | In fact any value enclosed in quotes will be treated as `character`. | R treats any value enclosed in quotes as `character`. |
+| `data-types-in-r.qmd:71` | 9 | Let us create two variables to store the first and last name of some random guy. | Let us create two variables to store a first and last name. |
+| `data-types-in-r.qmd:106` | 1, 3 | Such data types are created when we compare two objects in R using comparison or logical operators. | We create such data types when we compare two objects in R using comparison or logical operators. |
+| `data-types-in-r.qmd:124` | 4, §3a.3 | In the below example, we compare two numbers to see the outcome. | In the example below, we compare two numbers to see the outcome. |
+| `data-types-in-r.qmd:140` | 9 | `FALSE` is represented only by `0` and no other numbers. | `FALSE` is represented only by `0`. |
+| `data-types-in-r.qmd:188` | 9, 13 | Once you need to do arithmetic with dates — finding differences, adding months, handling time zones — reach for the [lubridate](https://lubridate.tidyverse.org/) package, which provides a consistent, readable vocabulary for all of it. | For arithmetic with dates, such as finding differences, adding months or handling time zones, use the [lubridate](https://lubridate.tidyverse.org/) package. |
+
+Refusals: The plain type definition, function/argument names and list before each run stay. The claim equating class and type and the logical 2-values wording are content issues; no new technical claim or code correction is made. Practice content is protected.
 
 ## Validation and remaining work
 
