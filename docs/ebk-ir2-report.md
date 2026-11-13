@@ -23,6 +23,7 @@ No new teaching content, headings, exercises or course links are added.
 | Dataframes in R | `data-frames-in-r.qmd` | 3 | 3 |
 | Install & Update R Packages | `install-update-r-packages.qmd` | 2 | 2 |
 | RStudio Projects & Data Import | `projects-import.qmd` | 3 | 3 |
+| Your First Visualization | `first-plot.qmd` | 1 | 1 |
 
 ## Preface
 
@@ -161,6 +162,14 @@ Refusals: The install-once/load-each-session distinction and the missing-package
 | `projects-import.qmd:53` | 13 | `read_excel()` works the same way for `.xlsx` files — sheet 1 by default: | `read_excel()` works the same way for `.xlsx` files. It reads sheet 1 by default: |
 
 Refusals: The concrete path example, workflow instructions, here explanation, file names and path warning stay. The browser lead-in, cell, first-run timing note and Practice Checks remain verbatim. No import methods, package-installation steps or new data checks are added.
+
+## Your First Visualization
+
+| file:line | principle | before | after |
+| --- | --- | --- | --- |
+| `first-plot.qmd:35` | 2, 13 | **Mental model:** every ggplot is *data* (`mpg`) + *aesthetics* (`aes(x, y)`) + *geometry* (`geom_point()`). | **Mental model:** every ggplot combines *data* (`mpg`), *aesthetics* (`aes(x, y)`) and *geometry* (`geom_point()`). |
+
+Refusals: The short geometry instruction, bundled-data warning, figures, browser lead-in and all Practice Checks stay. Adding definitions, chart-choice advice or new plots would introduce content and is outside this pass.
 
 ## Validation and remaining work
 
