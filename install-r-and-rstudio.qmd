@@ -15,7 +15,7 @@ Follow these steps:
 - Download R for your operating system from a [CRAN mirror](https://cran.r-project.org/mirrors.html)
   (Windows, macOS, or Linux installers are listed there).
 - Run the installer with default options.
-- Verify the installation by opening a terminal and running `R.version.string`.
+- Verify the installation by opening R (or RStudio) and typing `R.version.string` in the Console.
 
 ## RStudio
 
