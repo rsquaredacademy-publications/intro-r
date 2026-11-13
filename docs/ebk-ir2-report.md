@@ -27,6 +27,7 @@ No new teaching content, headings, exercises or course links are added.
 | Your First Data Wrangling | `first-wrangle.qmd` | 2 | 2 |
 | Factors in R | `factors-in-r.qmd` | 3 | 3 |
 | Lists in R | `lists-in-r.qmd` | 10 | 10 |
+| Getting Help in R | `getting-help-in-r.qmd` | 22 | 22 |
 
 ## Preface
 
@@ -209,6 +210,35 @@ Refusals: The level-order instruction, objectives and short examples stay. The c
 | `lists-in-r.qmd:77` | 3 | You can coerce other objects to list using `as.list()`. | You can coerce other objects to a list using `as.list()`. |
 
 Refusals: Let us try them one by one and the useful/heterogeneous definition are kept as voice traits. The matrix definition from part 1 stays. The erroneous claim inside the protected as.list(matrix) answer that it splits into columns is recorded as a content follow-up, not silently fixed. No list names, data or snippets are changed.
+
+## Getting Help in R
+
+| file:line | principle | before | after |
+| --- | --- | --- | --- |
+| `getting-help-in-r.qmd:12` | 3, 9 | Often we get stuck while doing some analysis as either we do not know the correct function to use or its syntax. | We often get stuck during an analysis because we do not know which function to use or its syntax. |
+| `getting-help-in-r.qmd:12` | 9, 10 | It is important for anyone who is new to R to know the right place to look for help. | Anyone new to R should know where to look for help. |
+| `getting-help-in-r.qmd:15` | 18 | - built in help system | - built-in help system |
+| `getting-help-in-r.qmd:17` | 18 | We will then look at the built in help system and package documentation. | We will then look at the built-in help system and package documentation. |
+| `getting-help-in-r.qmd:23` | 18 | aggregates blogs written in english from across the globe. | aggregates blogs written in English from across the globe. |
+| `getting-help-in-r.qmd:23` | 9 | This is the first place you want to visit if you want help with R, data analysis, visualization and machine learning. | This is the first place to visit for help with R, data analysis, visualization and machine learning. |
+| `getting-help-in-r.qmd:27` | 9, 10 | [Stack Overflow](https://stackoverflow.com/questions/tagged/r) is a great place to visit if you are having trouble with R code or packages. | [Stack Overflow](https://stackoverflow.com/questions/tagged/r) is a place to ask for help with R code or packages. |
+| `getting-help-in-r.qmd:27` | 9, 10 | Chances are high that someone has already encountered the same or similar problem and you can use the answers given by R experts. | Someone may have encountered a similar problem, and you can use the answers given by R experts. |
+| `getting-help-in-r.qmd:27` | 3, 9 | In case you have encountered a new problem or issue, you can ask for help by providing a reproducible example of your analysis along with the R code. | If you encounter a new problem, you can ask for help by providing a reproducible example of your analysis along with the R code. |
+| `getting-help-in-r.qmd:36` | 9, 10 | [RStudio](https://posit.co/resources/) has very good resources including cheatsheets, webinars and blogs. | [RStudio](https://posit.co/resources/) has resources including cheatsheets, webinars and blogs. |
+| `getting-help-in-r.qmd:40` | 9 | [Reddit](https://www.reddit.com/r/rstats/) is another place where you can look for help. | [Reddit](https://www.reddit.com/r/rstats/) is another place to look for help. |
+| `getting-help-in-r.qmd:48` | 9 | There are several R User Groups active across the globe. | Several R User Groups are active across the globe. |
+| `getting-help-in-r.qmd:52` | 11 | In this section, we will look at the following functions: | We can use the following functions to access the built-in help system: |
+| `getting-help-in-r.qmd:67` | 3 | Here you can find manuals, reference and other materials. | Here you can find manuals, references and other materials. |
+| `getting-help-in-r.qmd:84` | 2 | `help.search()` will search all sources of documentation and return those that match the search string. | `help.search()` searches all sources of documentation and returns those that match the search string. |
+| `getting-help-in-r.qmd:93` | 3 | demo displays an interactive demonstration of certain topics provided in a R package. | demo displays an interactive demonstration of certain topics provided in an R package. |
+| `getting-help-in-r.qmd:93` | 2, 9 | Typing `demo()` in the console will list the demos available in all the R packages installed. | Typing `demo()` in the console lists the demos available in installed R packages. |
+| `getting-help-in-r.qmd:120` | 3 | A vignette is a long form guide to a R package. | A vignette is a long-form guide to an R package. |
+| `getting-help-in-r.qmd:120` | 9 | You can access the vignettes available using `vignette()`. | You can access vignettes using `vignette()`. |
+| `getting-help-in-r.qmd:120` | 2, 6 | It will display a list of vignettes available in installed packages. | It displays a list of vignettes available in installed packages. |
+| `getting-help-in-r.qmd:134` | 2, 9 | It will list the vignettes in each package along with links to the web page and R code. | It lists the vignettes in each package with links to the web page and R code. |
+| `getting-help-in-r.qmd:142` | 2, 13 | `RSiteSearch()` will search for specified topics in help pages, vignettes and task views using the search engine at this [link](https://search.r-project.org/) and return the result in a browser. | `RSiteSearch()` searches for specified topics in help pages, vignettes and task views using the search engine at this [link](https://search.r-project.org/). It returns the result in a browser. |
+
+Refusals: The chapter orientation and Let us get started! hand-off stay. All resource targets, the R Bloggers first-place recommendation and functions remain; assessing current resource suitability would be content work. Audit L-2 is already resolved to distinct Stack Overflow and Posit Community sections. M-1 is now partly addressed: the lesson-5 callout/footer link is already absent, but the course-side mismatch needs desk follow-up. No functions/help chapter or new guidance is added.
 
 ## Validation and remaining work
 
