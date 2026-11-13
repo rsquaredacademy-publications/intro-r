@@ -21,6 +21,9 @@ RStudio. Chapters [Variables in R](variables-in-r.qmd) and [Data Types in R](dat
 variables and data types in R. Chapter [Getting Help in R](getting-help-in-r.qmd) shows the right place and right
 way to ask for help. Chapters [Vectors in R](vectors-in-r.qmd) to [Lists in R](lists-in-r.qmd) introduce the basic 
 data structures in R. Chapter [Install & Update R Packages](install-update-r-packages.qmd) explores the R package system.
+Chapter [RStudio Projects & Data Import](projects-import.qmd) covers portable paths and reading CSV and Excel files.
+Chapter [Your First Visualization](first-plot.qmd) introduces base R and ggplot2 graphics.
+Chapter [Your First Data Wrangling](first-wrangle.qmd) introduces dplyr verbs and the native pipe.
 
 ## Software information {.unnumbered}
 

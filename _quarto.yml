@@ -37,7 +37,6 @@ book:
         href: https://github.com/rsquaredacademy-publications/intro-r/
   chapters:
     - index.qmd
-    - about-the-author.qmd
     - introduction-to-r.qmd
     - install-r-and-rstudio.qmd
     - variables-in-r.qmd
@@ -51,6 +50,7 @@ book:
     - projects-import.qmd
     - first-plot.qmd
     - first-wrangle.qmd
+    - about-the-author.qmd
   downloads: [pdf, epub]
 
 execute:
