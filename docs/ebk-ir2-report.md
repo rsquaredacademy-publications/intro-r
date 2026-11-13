@@ -24,6 +24,7 @@ No new teaching content, headings, exercises or course links are added.
 | Install & Update R Packages | `install-update-r-packages.qmd` | 2 | 2 |
 | RStudio Projects & Data Import | `projects-import.qmd` | 3 | 3 |
 | Your First Visualization | `first-plot.qmd` | 1 | 1 |
+| Your First Data Wrangling | `first-wrangle.qmd` | 2 | 2 |
 
 ## Preface
 
@@ -170,6 +171,15 @@ Refusals: The concrete path example, workflow instructions, here explanation, fi
 | `first-plot.qmd:35` | 2, 13 | **Mental model:** every ggplot is *data* (`mpg`) + *aesthetics* (`aes(x, y)`) + *geometry* (`geom_point()`). | **Mental model:** every ggplot combines *data* (`mpg`), *aesthetics* (`aes(x, y)`) and *geometry* (`geom_point()`). |
 
 Refusals: The short geometry instruction, bundled-data warning, figures, browser lead-in and all Practice Checks stay. Adding definitions, chart-choice advice or new plots would introduce content and is outside this pass.
+
+## Your First Data Wrangling
+
+| file:line | principle | before | after |
+| --- | --- | --- | --- |
+| `first-wrangle.qmd:16` | 9, 10 | We use the native base pipe `&#124;>` (standard since R 4.1.0; zero external dependencies). | We use the native base pipe `&#124;>` (standard since R 4.1.0; no external dependencies). |
+| `first-wrangle.qmd:131` | 13 | > - Book: [R for Data Science (2e)](https://r4ds.hadley.nz/) — start at Chapter 1 | > - Book: [R for Data Science (2e)](https://r4ds.hadley.nz/), starting at Chapter 1 |
+
+Refusals: The native-pipe rule, all examples, the webR lead-in and cell, and the next-course hand-off stay. The five verbs need additional teaching prose, but supplying it would be new content. Practice Checks, including their informal explanations, are protected.
 
 ## Validation and remaining work
 
