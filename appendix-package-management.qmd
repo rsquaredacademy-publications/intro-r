@@ -4,15 +4,15 @@ Reference material for managing packages, followed by background on R and its in
 
 ## Introduction
 
-This appendix covers package management beyond the basics. Packages are fundamental to R. There are more than 22,000 packages available on [CRAN](https://cran.r-project.org/) or the Comprehensive R Archive Network (as of September 2026; verify the current count at [cran.r-project.org/web/packages](https://cran.r-project.org/web/packages/)).
+This appendix covers package management beyond the basics. Packages are fundamental to R. More than 22,000 packages are available on [CRAN](https://cran.r-project.org/), the Comprehensive R Archive Network (as of September 2026; verify the current count at [cran.r-project.org/web/packages](https://cran.r-project.org/web/packages/)).
 
-Packages are available for different [topics](https://cran.r-project.org/web/views/). You should always look for a package before writing code from scratch. In case you have written your own codes for a new analysis or topic, do share it with the R community by converting the code into a package. You can learn more about building R packages from [R Packages](https://r-pkgs.org/), a book written by [Hadley Wickham](https://hadley.nz/).
+Packages are available for different [topics](https://cran.r-project.org/web/views/). You should always look for a package before writing code from scratch. If you have written your own code for a new analysis or topic, do share it with the R community by converting it into a package. You can learn more about building R packages from [R Packages](https://r-pkgs.org/), a book by [Hadley Wickham](https://hadley.nz/).
 
 ## Other package sources
 
 ### GitHub
 
-Some R packages are made available on [GitHub](https://github.com/) before releasing them on CRAN. Such packages can be installed using `install_github()` from [devtools](https://cran.r-project.org/web/packages/devtools/index.html) or [remotes](https://cran.r-project.org/web/packages/remotes/index.html) package. You need to specify the name of the repository and the package. For example, to download [ggplot2](https://ggplot2.tidyverse.org/) or [dplyr](https://dplyr.tidyverse.org/), below is the code:
+Some developers make R packages available on [GitHub](https://github.com/) before releasing them on CRAN. We can install such packages using `install_github()` from the [devtools](https://cran.r-project.org/web/packages/devtools/index.html) or [remotes](https://cran.r-project.org/web/packages/remotes/index.html) package. You need to specify the name of the repository and the package. For example, we can download [ggplot2](https://ggplot2.tidyverse.org/) or [dplyr](https://dplyr.tidyverse.org/) with this code:
 
 ```{r install2, eval=FALSE}
 devtools::install_github("tidyverse/ggplot2")
@@ -35,7 +35,7 @@ BiocManager::install("GenomicFeatures")
 
 ## Install Different Versions
 
-Now that we have learnt how to install packages, let us look at installing different versions of the same package.
+Now that we have learned how to install packages, let us look at installing different versions of the same package.
 
 ```{r install7, eval=FALSE}
 remotes::install_version('dplyr', version = "0.5.0")
@@ -53,12 +53,12 @@ remotes::install_github('tidyverse/dplyr@*release')
 - `autoload('function_name', 'package_name')`: load functions and data from packages only when called in the script
 - `available.packages()`: packages available for installation
 - `old.packages()`: packages which have new versions available
-- `new.packages()`: packages already not installed
+- `new.packages()`: packages not yet installed
 - `remove.packages('package_name')`: remove installed packages
 
 ## Library Paths
 
-Library is a directory that contains all installed packages. Usually there will be more than one R library in your system. You can find the location of the libraries using `.libPaths()`.
+A library is a directory that contains installed packages. Your system will usually have more than one R library. You can locate the libraries using `.libPaths()`.
 
 ```{r install9}
 .libPaths()
@@ -100,17 +100,17 @@ The rest of this appendix gives background on the organizations behind R and the
 
 ### R Foundation
 
-R foundation is a not for profit organization founded by the members of the 
-R core team and is responsible for the continued development of R. It also 
-supports the annual useR conferences. You can learn more about the R foundation
+The R Foundation is a not-for-profit organization founded by members of the
+R core team. It is responsible for the continued development of R. It also
+supports the annual useR conferences. You can learn more about the R Foundation
 [here](https://www.r-project.org/foundation/).
 
 ### R Consortium
 
-R consortium provides support to the R foundation and other key organizations
+The R Consortium supports the R Foundation and other key organizations
 and groups developing, maintaining and using R. It funds projects that improve
-the infrastructure around R and provides support to conferences and user groups
-around the world. You can learn more about R consortium [here](https://www.r-consortium.org/).
+the infrastructure around R and supports conferences and user groups
+around the world. You can learn more about the R Consortium [here](https://www.r-consortium.org/).
 
 
 ## Installation
@@ -120,8 +120,8 @@ can download and install R from any of the CRAN mirrors listed [here](https://cr
 
 ### CRAN
 
-[CRAN](https://cran.r-project.org/mirrors.html) stands for **C**omprehensive **R** 
-**A**rchive **N**etwork and you can download R and user contributed packages 
+[CRAN](https://cran.r-project.org/mirrors.html) stands for **C**omprehensive **R**
+**A**rchive **N**etwork. You can download R and user contributed packages
 from here for different operating systems. CRAN is pronounced as KRAN or C-RAN.
 
 

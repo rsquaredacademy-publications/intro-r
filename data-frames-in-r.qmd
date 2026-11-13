@@ -18,13 +18,13 @@ different types.
 
 ## Create dataframes
 
-Use `data.frame` to create dataframes. Below is the function syntax:
+Use `data.frame` to create data frames. The function syntax is:
 
 ```{r df1}
 args(data.frame)
 ```
 
-Data frames are basically lists with elements of equal length and as such, they are heterogeneous. Let us create a dataframe:
+Data frames are lists with elements of equal length, so they can hold different data types. Let us create a data frame:
 
 ```{r df2}
 name <- c('John', 'Jack', 'Jill')
@@ -132,7 +132,8 @@ What do `students[1]`, `students[[1]]`, and `students$name` each return?
 
 **Answer:** A one-column **data frame**; a **vector**; and the same **vector**.
 
-*Explanation:* `[` always returns a data frame, even for a single column, so
+*Explanation:* `students[1]`, with a single index and no comma, always returns a
+data frame, even for a single column, so
 downstream code that expects a vector breaks. `[[` and `$` both extract the
 column itself as a vector. Reach for `[[` or `$` whenever you want the values.
 </details>
@@ -163,8 +164,7 @@ How do you return only the students older than 26?
 
 *Explanation:* The condition builds a logical vector with one value per row.
 Using it as the row index keeps the rows where the condition is `TRUE` and drops
-the rest. Because the condition has the same length as the data frame, the
-column is left out of the result.
+the rest. The column position after the comma is empty, so every column is kept.
 </details>
 
 **Knowledge Check:** *How many rows and columns?*

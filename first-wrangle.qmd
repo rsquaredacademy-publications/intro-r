@@ -13,7 +13,7 @@ library(dplyr)
 data(mpg, package = "ggplot2")
 ```
 
-We use the native base pipe `|>` (standard since R 4.1.0; zero external
+We use the native base pipe `|>` (standard since R 4.1.0; no external
 dependencies). We do **not** use `%>%`.
 
 ## The five verbs
@@ -128,7 +128,7 @@ each step in plain words is the fastest way to check you built the right one.
 ## Where to go next
 
 > **Where to go next:**
-> - Book: [R for Data Science (2e)](https://r4ds.hadley.nz/) — start at Chapter 1
+> - Book: [R for Data Science (2e)](https://r4ds.hadley.nz/), starting at Chapter 1
 > - Courses: [Rsquared Academy](https://www.rsquaredacademy.com/) Data Wrangling series
 > - More books: [ebooks.rsquaredacademy.com](https://ebooks.rsquaredacademy.com/)
 

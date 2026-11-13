@@ -11,7 +11,7 @@
 
 ## Introduction
 
-Categorical or qualitative data in R is treated as data type `factor`. 
+In R, we represent categorical or qualitative data with the data type `factor`.
 
 ## Create Factors
 
@@ -44,7 +44,7 @@ levels(size)
 
 ## Specify Labels
 
-Use the `labels` argument to attach shorter or prettier display labels while
+Use the `labels` argument to attach shorter display labels while
 keeping the underlying level order:
 
 ```{r f4}
@@ -66,7 +66,7 @@ nlevels(size)
 is.ordered(size)
 ```
 
-For modern factor manipulation (reordering, recoding, lumping rare levels),
-see the [forcats](https://forcats.tidyverse.org/) package.
+To reorder, recode or lump rare levels, see the
+[forcats](https://forcats.tidyverse.org/) package.
 
 {{< include _includes/chapter-footer/factors-in-r.qmd >}}

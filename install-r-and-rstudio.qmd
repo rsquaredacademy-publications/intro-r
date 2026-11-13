@@ -4,9 +4,9 @@
 >
 > - Install R on Windows, macOS, or Linux from a CRAN mirror.
 > - Verify an installation by running `R.version.string`.
-> - Install RStudio Desktop, after R itself is in place.
-> - Create an RStudio Project, so working directory, history, and settings
->   travel together in a single `.Rproj` file.
+> - Install RStudio Desktop after installing R.
+> - Create an RStudio Project to keep the working directory, history, and settings
+>   together in a single `.Rproj` file.
 
 ## R
 

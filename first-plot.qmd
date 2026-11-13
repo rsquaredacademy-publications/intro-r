@@ -32,8 +32,8 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
   labs(x = "Displacement", y = "Highway MPG")
 ```
 
-**Mental model:** every ggplot is *data* (`mpg`) + *aesthetics* (`aes(x, y)`)
-+ *geometry* (`geom_point()`). Change the geometry, keep the mapping.
+**Mental model:** every ggplot combines *data* (`mpg`), *aesthetics* (`aes(x, y)`)
+and *geometry* (`geom_point()`). Change the geometry, keep the mapping.
 
 ## Try it in your browser {.unnumbered}
 
