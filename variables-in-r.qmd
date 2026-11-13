@@ -10,7 +10,7 @@
 
 ## Introduction
 
-In the previous chapter, we learnt to install RStudio. In this chapter, we will learn about variables and data types. You can skip this chapter, if you have prior experience in any other programming language.
+In the previous chapter, we learnt to install RStudio. In this chapter, we will learn about variables. You can skip this chapter, if you have prior experience in any other programming language.
 
 ## What is a variable?
 
@@ -47,17 +47,14 @@ we will use the `radius` variable to compute the area of a circle.
 
 ## Using Variables
 
-We will create two variables, `radius` and `pi`, and use them to compute the area of a circle and store it in another variable `area`. 
+We will use `radius` and R's built-in constant `pi` to compute the area of a circle and store it in another variable `area`. R already provides `pi`; there is no need to assign it a value.
 
 ```{r var3}
 # assign value 3 to variable radius
 radius <- 3
 
-# assign value 3.14 to variable pi
-pi <- 3.14
-
 # compute area of circle
-area <- pi * radius * radius
+area <- pi * radius^2
 
 # call radius
 radius
