@@ -20,6 +20,7 @@ No new teaching content, headings, exercises or course links are added.
 | Variables in R | `variables-in-r.qmd` | 13 | 13 |
 | Data Types in R | `data-types-in-r.qmd` | 14 | 14 |
 | Vectors in R | `vectors-in-r.qmd` | 32 | 32 |
+| Dataframes in R | `data-frames-in-r.qmd` | 3 | 3 |
 
 ## Preface
 
@@ -129,6 +130,16 @@ Refusals: The plain type definition, function/argument names and list before eac
 | `vectors-in-r.qmd:466` | 9 (also 1) | When you create an expression using a comparison operator, the output is always a logical value i.e. `TRUE` or `FALSE`. | A comparison operator always returns a logical value, `TRUE` or `FALSE`. |
 
 Refusals: The pilot's three explicit refusals remain verbatim: the help exercise hand-off, the missing-data safety warning and the Let us combine comparison/logical operators line. The integer-to-logical aside, other callout, webR cell and lead-in, all Practice Check stems and details answers are retained. The pilot's section 4 additions and section 6 proposed new close are new content and are not added; part 1 already supplies the standard ending. The corrected Most summary functions sentence from part 1 is retained instead of restoring the stale all computations claim. The na.rm rule uses the pilot wording while retaining the existing separate `na.rm` and `TRUE` spans, as required by the inline-code constraint. The pilot's explicit deletion of three repetitive coercion sentences removes their inline spans with the sentences; every surviving inline literal is unchanged. No book-wide element/value or type terminology sweep is inferred from the pilot's discussion.
+
+## Dataframes in R
+
+| file:line | principle | before | after |
+| --- | --- | --- | --- |
+| `data-frames-in-r.qmd:21` | 4 | Below is the function syntax: | The function syntax is: |
+| `data-frames-in-r.qmd:21` | 8 | Use `data.frame` to create dataframes. | Use `data.frame` to create data frames. |
+| `data-frames-in-r.qmd:27` | 9, 10 | Data frames are basically lists with elements of equal length and as such, they are heterogeneous. Let us create a dataframe: | Data frames are lists with elements of equal length, so they can hold different data types. Let us create a data frame: |
+
+Refusals: The short definition, inspection chunks and column/row demos stay. Headings retain Dataframes as required, while body prose uses data frame consistently. The stringsAsFactors history is retained, including its dates/numbers; reducing it or removing args() would be content/code work. All checks, webR content and footers are protected.
 
 ## Validation and remaining work
 
