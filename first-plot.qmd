@@ -1,5 +1,7 @@
 # Your First Visualization {#sec-first-plot}
 
+> [Practise this interactively in Course 1 (Introduction to R), lesson 10]({{< var course1_url >}})
+
 > **Learning Objectives:** After this chapter you will be able to:
 >
 > - Load `ggplot2` and its bundled `mpg` dataset.
