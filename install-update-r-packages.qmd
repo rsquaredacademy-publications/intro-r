@@ -11,7 +11,7 @@
 
 In this chapter, we will learn about R packages. Packages are fundamental to R. There are more than 22,000 packages available on [CRAN](https://cran.r-project.org/) or the Comprehensive R Archive Network (as of September 2026; verify the current count at [cran.r-project.org/web/packages](https://cran.r-project.org/web/packages/)).
 
-Packages are available for different [topics](https://cran.r-project.org/web/views/). You should always look for a package before writing code from scratch. In case you have written your own codes for a new analysis or topic, do share it with the R community by converting the code into a package. You can learn more about building R packages from [R Packages](https://r-pkgs.had.co.nz/), a book written by [Hadley Wickham](https://hadley.nz/).
+Packages are available for different [topics](https://cran.r-project.org/web/views/). You should always look for a package before writing code from scratch. In case you have written your own codes for a new analysis or topic, do share it with the R community by converting the code into a package. You can learn more about building R packages from [R Packages](https://r-pkgs.org/), a book written by [Hadley Wickham](https://hadley.nz/).
 
 ## Install Packages
 
@@ -79,7 +79,7 @@ Library is a directory that contains all installed packages. Usually there will 
 .libPaths()
 ```
 
-You can use `lib` when you want to install, load, update and remove packages from a particular library.
+Use `lib` to install, update or remove packages from a particular library, and `lib.loc` to load them.
 
 ### Install
 
@@ -90,7 +90,7 @@ install.packages('stringr', lib = .libPaths()[1])
 ### Load
 
 ```{r install11, eval=FALSE}
-library(lubridate, lib = .libPaths()[1])
+library(lubridate, lib.loc = .libPaths()[1])
 ```
 
 ### Update Packages
