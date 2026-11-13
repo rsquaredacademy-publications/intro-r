@@ -15,6 +15,7 @@ No new teaching content, headings, exercises or course links are added.
 | Chapter | File | Edit groups | Table rows |
 | --- | --- | ---: | ---: |
 | Preface | `index.qmd` | 4 | 4 |
+| Introduction to R | `introduction-to-r.qmd` | 2 | 2 |
 
 ## Preface
 
@@ -26,6 +27,15 @@ No new teaching content, headings, exercises or course links are added.
 | `index.qmd:41` | 9, 13 | This is for your convenience when you want to copy and run the code (the text output will be ignored since it is commented out). | This lets you copy and run the code, since R ignores the commented text output. |
 
 Refusals: The chapter-by-chapter reading guide, software-information placement, session chunk, cover and license are retained. The author/license material is protected.
+
+## Introduction to R
+
+| file:line | principle | before | after |
+| --- | --- | --- | --- |
+| `introduction-to-r.qmd:12` | 18 | government organisations | government organizations |
+| `introduction-to-r.qmd:24` | 9, 10 | [RStudio](https://posit.co/) is a very popular IDE (integrated development environment) built to suit the data science work flow. | [RStudio](https://posit.co/) is a popular IDE (integrated development environment) built for the data science workflow. |
+
+Refusals: The plain definition, chapter syllabus, RStudio/Positron introduction, illustration and footer already fit the voice. The conceptual Course companion wording (audit L-4) is already fixed.
 
 ## Validation and remaining work
 

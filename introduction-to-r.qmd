@@ -9,7 +9,7 @@
 ## Overview
 
 R is a free and open source programming language widely used in academia, 
-industry and government organisations for data science and machine learning. 
+industry and government organizations for data science and machine learning.
 R is well suited for interactive data analysis, visualization and modeling. To
 view a list of organizations using R, click [here](https://github.com/ThinkR-open/companies-using-r).
 
@@ -21,8 +21,8 @@ Background on R organizations, package sources and the R GUI is in [Package mana
 
 ### RStudio
 
-[RStudio](https://posit.co/) is a very popular IDE (integrated development environment)
-built to suit the data science work flow. RStudio is developed by Posit (formerly
+[RStudio](https://posit.co/) is a popular IDE (integrated development environment)
+built for the data science workflow. RStudio is developed by Posit (formerly
 RStudio, rebranded in 2022); [Positron](https://positron.posit.co/) is a modern
 alternative IDE for R and Python.
 
