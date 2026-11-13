@@ -32,15 +32,6 @@ devtools::install_github("tidyverse/ggplot2")
 remotes::install_github("tidyverse/dplyr")
 ```
 
-### BitBucket
-
-[Bitbucket](https://bitbucket.org/) is similar to GitHub. You can install packages from Bitbucket using `install_bitbucket()` from devtools or remotes package.
-
-```{r install3, eval=FALSE}
-devtools::install_bitbucket("dannavarro/lsr-package")
-remotes::install_bitbucket("dannavarro/lsr-package")
-```
-
 ### Bioconductor
 
 [Bioconductor](https://www.bioconductor.org/) provides tools for analysis and comprehension of high throughput genomic data. Install the `BiocManager` package and use `BiocManager::install()`:
@@ -51,14 +42,6 @@ install.packages("BiocManager")
 
 # install a Bioconductor package
 BiocManager::install("GenomicFeatures")
-```
-
-### rForge
-
-Many R packages are hosted at [R-Forge](https://r-forge.r-project.org/), a platform for development of R packages. (Note: R-Forge is largely inactive today; prefer CRAN or GitHub for new work.)
-
-```{r install6, eval=FALSE}
-install.packages('quantstrat', repos = 'https://r-forge.r-project.org/')
 ```
 
 > For faster installs with dependency resolution, you can also try `pak::pkg_install()` from the [pak](https://pak.r-lib.org/) package as a modern alternative.
