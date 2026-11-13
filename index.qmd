@@ -16,7 +16,7 @@ description: "A beginner-friendly introduction to the R programming language."
 ## Structure of the book {.unnumbered}
 
 Chapter [Introduction to R](introduction-to-r.qmd) gives a quick overview of R and its development tools.
-Chapter [Install R & RStudio](install-r-and-rstudio.qmd) acts as a guide for installing R and RStudio.
+Chapter [Install R & RStudio](install-r-and-rstudio.qmd) guides you through installing R and RStudio.
 Chapter [Variables in R](variables-in-r.qmd) introduces variables and assignment.
 Chapter [Data Types in R](data-types-in-r.qmd) introduces the types of values used in R.
 Chapter [Vectors in R](vectors-in-r.qmd) covers vectors, coercion, operations and indexing.
@@ -32,10 +32,10 @@ Chapter [Getting Help in R](getting-help-in-r.qmd) shows where and how to ask fo
 
 ## Software information {.unnumbered}
 
-The R session information when compiling this book is shown below:
+The R session information below shows the setup used to compile this book:
 
 ```{r session}
 sessionInfo()
 ```
 
-We do not add prompts (`>` and `+`) to R source code in this book, and we comment out the text output with two hashes `##` by default, as you can see from the R session information above. This is for your convenience when you want to copy and run the code (the text output will be ignored since it is commented out). Package names are in bold text (e.g., **rmarkdown**), and function names are followed by parentheses (e.g., `mean()`). The double-colon operator `::` means accessing an object from a package. 
+We do not add prompts (`>` and `+`) to R source code in this book. We comment out text output with two hashes `##` by default, as in the R session information above. This lets you copy and run the code, since R ignores the commented text output. Package names are in bold text (e.g., **rmarkdown**), and function names are followed by parentheses (e.g., `mean()`). The double-colon operator `::` means accessing an object from a package.
