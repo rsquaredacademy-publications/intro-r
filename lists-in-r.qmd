@@ -154,7 +154,8 @@ How do you turn the vector `vect1 <- 1:10` into a list, one element per value?
 **Answer:** `as.list(vect1)`, which gives a list of ten single numbers.
 
 *Explanation:* `as.list()` splits the vector into its individual elements. The
-same call works on a matrix, in which case it splits the matrix into columns.
+same call works on a matrix, in which case every value of the matrix becomes
+its own element (nine elements for a 3 x 3 matrix, taken column by column).
 The reverse direction is `unlist()`.
 </details>
 
