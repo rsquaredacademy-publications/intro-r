@@ -29,6 +29,7 @@ No new teaching content, headings, exercises or course links are added.
 | Lists in R | `lists-in-r.qmd` | 10 | 10 |
 | Getting Help in R | `getting-help-in-r.qmd` | 22 | 22 |
 | About the Author | `about-the-author.qmd` | 1 | 1 |
+| Package management | `appendix-package-management.qmd` | 17 | 17 |
 
 ## Preface
 
@@ -143,8 +144,8 @@ Refusals: The pilot's three explicit refusals remain verbatim: the help exercise
 
 | file:line | principle | before | after |
 | --- | --- | --- | --- |
-| `data-frames-in-r.qmd:21` | 4 | Below is the function syntax: | The function syntax is: |
 | `data-frames-in-r.qmd:21` | 8 | Use `data.frame` to create dataframes. | Use `data.frame` to create data frames. |
+| `data-frames-in-r.qmd:21` | 4 | Below is the function syntax: | The function syntax is: |
 | `data-frames-in-r.qmd:27` | 9, 10 | Data frames are basically lists with elements of equal length and as such, they are heterogeneous. Let us create a dataframe: | Data frames are lists with elements of equal length, so they can hold different data types. Let us create a data frame: |
 
 Refusals: The short definition, inspection chunks and column/row demos stay. Headings retain Dataframes as required, while body prose uses data frame consistently. The stringsAsFactors history is retained, including its dates/numbers; reducing it or removing args() would be content/code work. All checks, webR content and footers are protected.
@@ -180,7 +181,7 @@ Refusals: The short geometry instruction, bundled-data warning, figures, browser
 
 | file:line | principle | before | after |
 | --- | --- | --- | --- |
-| `first-wrangle.qmd:16` | 9, 10 | We use the native base pipe `&#124;>` (standard since R 4.1.0; zero external dependencies). | We use the native base pipe `&#124;>` (standard since R 4.1.0; no external dependencies). |
+| `first-wrangle.qmd:16` | 9, 10 | We use the native base pipe `\|>` (standard since R 4.1.0; zero external dependencies). | We use the native base pipe `\|>` (standard since R 4.1.0; no external dependencies). |
 | `first-wrangle.qmd:131` | 13 | > - Book: [R for Data Science (2e)](https://r4ds.hadley.nz/) — start at Chapter 1 | > - Book: [R for Data Science (2e)](https://r4ds.hadley.nz/), starting at Chapter 1 |
 
 Refusals: The native-pipe rule, all examples, the webR lead-in and cell, and the next-course hand-off stay. The five verbs need additional teaching prose, but supplying it would be new content. Practice Checks, including their informal explanations, are protected.
@@ -249,6 +250,153 @@ Refusals: The chapter orientation and Let us get started! hand-off stay. All res
 
 Refusals: The biography, degree wording, package credits, dates and all links remain. Third person is appropriate for a biography; it is not converted into the instructional we voice.
 
-## Validation and remaining work
+## Package management
 
-Validation is in progress; the final results will be recorded here before completion.
+| file:line | principle | before | after |
+| --- | --- | --- | --- |
+| `appendix-package-management.qmd:7` | 9 | There are more than 22,000 packages available on [CRAN](https://cran.r-project.org/) or the Comprehensive R Archive Network (as of September 2026; verify the current count at [cran.r-project.org/web/packages](https://cran.r-project.org/web/packages/)). | More than 22,000 packages are available on [CRAN](https://cran.r-project.org/), the Comprehensive R Archive Network (as of September 2026; verify the current count at [cran.r-project.org/web/packages](https://cran.r-project.org/web/packages/)). |
+| `appendix-package-management.qmd:9` | 3, 9 | In case you have written your own codes for a new analysis or topic, do share it with the R community by converting the code into a package. | If you have written your own code for a new analysis or topic, do share it with the R community by converting it into a package. |
+| `appendix-package-management.qmd:9` | 9 | a book written by [Hadley Wickham](https://hadley.nz/). | a book by [Hadley Wickham](https://hadley.nz/). |
+| `appendix-package-management.qmd:15` | 1 | Some R packages are made available on [GitHub](https://github.com/) before releasing them on CRAN. | Some developers make R packages available on [GitHub](https://github.com/) before releasing them on CRAN. |
+| `appendix-package-management.qmd:15` | 1, 3 | Such packages can be installed using `install_github()` from [devtools](https://cran.r-project.org/web/packages/devtools/index.html) or [remotes](https://cran.r-project.org/web/packages/remotes/index.html) package. | We can install such packages using `install_github()` from the [devtools](https://cran.r-project.org/web/packages/devtools/index.html) or [remotes](https://cran.r-project.org/web/packages/remotes/index.html) package. |
+| `appendix-package-management.qmd:15` | 4, 9 | For example, to download [ggplot2](https://ggplot2.tidyverse.org/) or [dplyr](https://dplyr.tidyverse.org/), below is the code: | For example, we can download [ggplot2](https://ggplot2.tidyverse.org/) or [dplyr](https://dplyr.tidyverse.org/) with this code: |
+| `appendix-package-management.qmd:38` | 18 | Now that we have learnt how to install packages, let us look at installing different versions of the same package. | Now that we have learned how to install packages, let us look at installing different versions of the same package. |
+| `appendix-package-management.qmd:56` | 3 | - `new.packages()`: packages already not installed | - `new.packages()`: packages not yet installed |
+| `appendix-package-management.qmd:61` | 3, 9 | Library is a directory that contains all installed packages. | A library is a directory that contains installed packages. |
+| `appendix-package-management.qmd:61` | 3, 9 | Usually there will be more than one R library in your system. | Your system will usually have more than one R library. |
+| `appendix-package-management.qmd:61` | 2, 9 | You can find the location of the libraries using `.libPaths()`. | You can locate the libraries using `.libPaths()`. |
+| `appendix-package-management.qmd:103` | 3, 13 | R foundation is a not for profit organization founded by the members of the R core team and is responsible for the continued development of R. | The R Foundation is a not-for-profit organization founded by members of the R core team. It is responsible for the continued development of R. |
+| `appendix-package-management.qmd:105` | 18 | You can learn more about the R foundation [here](https://www.r-project.org/foundation/). | You can learn more about the R Foundation [here](https://www.r-project.org/foundation/). |
+| `appendix-package-management.qmd:110` | 3, 18 | R consortium provides support to the R foundation and other key organizations and groups developing, maintaining and using R. | The R Consortium supports the R Foundation and other key organizations and groups developing, maintaining and using R. |
+| `appendix-package-management.qmd:111` | 2, 9 | It funds projects that improve the infrastructure around R and provides support to conferences and user groups around the world. | It funds projects that improve the infrastructure around R and supports conferences and user groups around the world. |
+| `appendix-package-management.qmd:113` | 3, 18 | You can learn more about R consortium [here](https://www.r-consortium.org/). | You can learn more about the R Consortium [here](https://www.r-consortium.org/). |
+| `appendix-package-management.qmd:123` | 13 | [CRAN](https://cran.r-project.org/mirrors.html) stands for **C**omprehensive **R** **A**rchive **N**etwork and you can download R and user contributed packages from here for different operating systems. | [CRAN](https://cran.r-project.org/mirrors.html) stands for **C**omprehensive **R** **A**rchive **N**etwork. You can download R and user contributed packages from here for different operating systems. |
+
+Refusals: The appendix/reference scope and background transition (audit L-3) are already fixed. L-1 is also already fixed: prose and update.packages() use lib.loc. The dated package count, specific versions, paths, functions, package sources, installation lists and R GUI output remain; no live package-count claim is added or verified. The package-sharing invitation stays.
+
+## Final results
+
+All 16 book sources are done: the 13 instructional chapters, Preface, About the
+Author and Package management appendix. There are 131 changed sentence groups,
+represented by 131 table rows above. No chapter exceeds 40 rows and no changes
+are omitted from the tables. Every chapter has one local commit named
+`style: <chapter title> (ebk-ir2)`; the report was updated with each chapter.
+The final validation record is included in the appendix chapter commit.
+
+The approved pilot's 28 suggested blocks are applied (the objectives block
+contains two edited bullets). Its three refusals are retained. Two explicit
+adaptations preserve the later part-1 NA correction and the protected separate
+`na.rm` / `TRUE` inline spans; the Vectors refusal paragraph records both.
+Its proposed new teaching cases and closing paragraphs were not added because
+this brief forbids new content and preserves the existing footer structure.
+The footers already provide key points and the next/course pointers.
+
+### Protected-content and scope checks
+
+The guard compared `origin/master` with `HEAD`, extracting the relevant lines
+from each committed source before comparing them. Result: **zero changes** to
+fenced code blocks (including fence lines), chunk headers/options/labels or
+heading lines. Across all 31 tracked `.qmd` files this covers 99 fenced chunks,
+803 lines including fences and 179 headings. It also found no changes to the
+31 details answer blocks, the six Practice Check sections, five browser
+lead-ins/timing notes, YAML, anchors, numbers, link targets, image markup,
+include/variable shortcodes or any of the 13 complete footer include files.
+Every surviving inline-code span is identical. The seven removed inline spans
+belonged only to the three repetitive coercion sentences the pilot explicitly
+deletes; no inline literal was rewritten or introduced.
+
+`git diff origin/master --stat` contains exactly 16 root `.qmd` prose files and
+this report. `git diff origin/master --check` passes. No rendered output,
+configuration, code, data or other worktree is changed. No push, gh/GitHub
+operation, branch switch or LMS edit was performed. The final history has 16
+chapter commits, and the worktree is clean after the final commit.
+
+### Render and artifact checks
+
+Both copies were created with `git archive` outside the repository, under:
+
+`C:/Users/DELL/AppData/Local/Temp/ebk-ir2-bxq2gzxj/`
+
+`baseline/` archives the starting HEAD (`30244c0`); `validated/` archives HEAD
+after all chapter edits. All 16 archived book sources were subsequently
+compared with the final committed sources and match exactly. All render commands
+ran through `bash ~/.claude/bin/heavy-slot.sh ebk-ir2 <command>` in those copies.
+No render ran in this worktree.
+
+Local tools: R 4.6.1 and Quarto 1.6.39. The archives use installed R libraries
+with `RENV_CONFIG_AUTOLOADER_ENABLED=false`, `LC_ALL=C`, `LANG=C` and
+`R_LIBS_USER` containing the existing temporary here library and the installed
+user library. No dependency, lockfile or configuration change was committed.
+
+| Check | Baseline | Edited archive |
+| --- | --- | --- |
+| Repository command `quarto render` | Stops at PDF: `typst not found` | Same message; no new errors/warnings |
+| `quarto render --to html` | Exit 0; zero warnings/errors | Exit 0; zero warnings/errors |
+| `quarto render --to epub --no-clean` | Exit 0; zero warnings/errors | Exit 0; zero warnings/errors |
+| `Rscript scripts/webr-smoke.R` | Five cells across 16 sources; pass | Five cells across 16 sources; pass |
+| HTML chapter/appendix coverage | 16 of 16 | 16 of 16 |
+| Local HTML link/asset/fragment check | 1,429 references; zero broken non-PDF references | Same |
+| Missing PDF download references | 16 (Typst unavailable) | Same 16; no regression |
+| ePub footer coverage | All 13 instructional footers | All 13 instructional footers |
+
+The edited archive also passed `scripts/test-redirects.sh` (12 targets, zero
+missing), `scripts/make-sitemap.sh` and `scripts/verify-sitemap.sh` (all 16 pages).
+The declared-slug check used a direct `_quarto.yml`/HTML comparison because
+`yq` is unavailable locally. No unresolved `??` cross-reference marker or
+unexpanded course-variable shortcode was found in the rendered pages.
+
+Full/PDF validation is incomplete because Typst is not installed. The same
+failure occurs in the unchanged baseline; the pass introduces no new render
+error or warning. An external-link crawl and live browser execution of webR
+were not performed; the unchanged cells passed the repository smoke check.
+
+### Part-1 audit disposition
+
+| Finding | Current state / action |
+| --- | --- |
+| L-1: update.packages argument | Already fixed at the baseline: the prose and example use `lib.loc` for updates. No code edit made. |
+| L-2: repeated community-help sections | Already fixed at the baseline: separate Stack Overflow and Posit Community sections; the redundant Community help/RStudio Community sequence is absent. No heading change made. |
+| L-3: appendix orientation/empty transition | Already fixed at the baseline: appendix-specific opening and a sentence under R background and installation tools. |
+| L-4: conceptual lesson-0 practice wording | Already fixed at the baseline: the introduction footer says Course companion. |
+| M-1: Getting Help / lesson 5 | The Getting Help lesson-5 callout and footer link are already absent from this baseline. No book-side style fix remains; the course-side functions destination needs the future content/link follow-up below. |
+
+### Not done and follow-ups in full
+
+No requested prose-style chapter remains unfinished. Protected material and
+new teaching content were deliberately left as required. The following work
+needs its own content/publication scope; it is not silently included here:
+
+1. **Complete PDF validation before publication.** Run the full book command
+   with CI's pinned Quarto 1.6.40, Typst 0.11.0 and Linux Libertine/DejaVu fonts.
+   Confirm the PDF and all download links exist, then let the existing CI job
+   own the published artifacts. No generated `docs/` output should be committed
+   from a local render.
+2. **Correct the protected Lists answer.** In `lists-in-r.qmd`, the Coercing to
+   a list explanation says `as.list(matrix)` splits a matrix into columns.
+   It produces one list element per matrix element. This factual correction
+   requires changing the explicitly protected details answer block.
+3. **Review the protected Data Frames answers.** The Filtering rows by a
+   condition explanation says the column is left out of the result because
+   the condition has the same length as the data frame; the example selects
+   rows and retains all columns. Also qualify the One column, three operators
+   explanation's broad claim that `[` always returns a data frame: the shown
+   one-index form does, while two-index selection can simplify. Both changes
+   belong in a separate answer/content correction.
+4. **Review Data Types explanations as content.** The `class()` list entry
+   equates class with type; the Logical paragraph says only 2 values and then
+   includes missing `NA`. Clarify class versus type and logical missing values
+   in a separately approved teaching pass, preserving the intended examples.
+   They were not corrected by changing code or introducing claims in this pass.
+5. **Resolve the course functions/help destination when that content exists.**
+   The audit identifies Course 1 lesson 5 as functions (`round()`, named and
+   positional arguments, defaults), rather than Getting Help. The book's
+   mismatched reciprocal link is already removed. Agree and publish a stable
+   calculator/functions chapter URL, then have the desk repoint the relevant
+   course lesson links and review the reciprocal pairing. No course link target
+   or LMS file was changed here.
+6. **Obtain a separate decision for protected exercise style and new content.**
+   The details answers retain their informal language and em dashes, as the
+   pilot explicitly refuses to edit them. The pilot's additional recycling,
+   missing-name, which() and integer-sequence cases, additional rule-of-thumb
+   lines remain outside this prose pass. Approve that content scope before adding examples, expanding exercises,
+   changing headings/footers or adjusting course links.
