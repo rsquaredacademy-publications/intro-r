@@ -12,13 +12,13 @@
 
 ## Introduction
 
-In the previous chapter, we learnt to install RStudio. In this chapter, we will learn about variables. You can skip this chapter, if you have prior experience in any other programming language.
+In the previous chapter, we learned to install RStudio. In this chapter, we will learn about variables. You can skip this chapter if you have prior experience in another programming language.
 
 ## What is a variable?
 
 - variables are the fundamental elements of any programming language
-- they are used to represent values that are likely to change
-- they reference memory locations that store information/data
+- they represent values that are likely to change
+- they reference memory locations that store data
 
 Let us use a simple case study to understand variables. Suppose you are computing the area of a circle whose radius is 3. In R, you can do this straight away as shown below:
 
@@ -26,7 +26,7 @@ Let us use a simple case study to understand variables. Suppose you are computin
 3.14 * 3 * 3
 ```
 
-But you cannot reuse the radius or the area computed in any other analysis or computation. Let us see how variables can change the above scenario and help us in reusing values and computations.
+Every new analysis or computation would need the radius and the area typed again. Let us see how variables help us reuse values and computations.
 
 ## Creating Variables
 
@@ -36,7 +36,7 @@ A variable consists of 3 components:
 - assignment operator
 - variable value
 
-We can store the value of the radius by creating a variable and assigning it the value. In this case, we create a variable 
+We can store the radius by assigning its value to a variable. In this case, we create a variable
 called `radius` and assign it the value `3` using the assignment operator `<-`. 
 
 ```{r var2}
@@ -44,7 +44,7 @@ radius <- 3
 radius
 ```
 
-Now that we have learnt to create variables, let us see how we can use them for other computations. For our case study, 
+Now that we have learned to create variables, let us see how we can use them for other computations. For our case study,
 we will use the `radius` variable to compute the area of a circle.
 
 ## Using Variables
@@ -76,11 +76,11 @@ area
 
 ## Naming Conventions
 
-- Name must begin with a letter or a dot (`.`); e.g. `.hidden <- 42` is valid in base R. Do not use numbers, dollar sign (`$`) or underscore (`_`) as the first character.
-- The name can contain numbers or underscore. Do not use dash (`-`). Periods (`.`) are syntactically valid in R variable names, but are discouraged in modern style guides (tidyverse style prefers `snake_case`).
-- Do not use the names of keywords and avoid using the names of built in functions.
+- A name must begin with a letter or a dot (`.`); e.g. `.hidden <- 42` is valid in base R. Do not use numbers, dollar sign (`$`) or underscore (`_`) as the first character.
+- The name can contain numbers or underscores. Do not use dash (`-`). Periods (`.`) are syntactically valid in R variable names, but are discouraged in modern style guides (tidyverse style prefers `snake_case`).
+- Do not use the names of keywords and avoid using the names of built-in functions.
 - Variables are case sensitive; `average` and `Average` would be different variables.
-- Use names that are descriptive. Generally, variable names should be nouns.
-- If the name is made of more than one word, use underscore to separate the words.
+- Use descriptive names. Generally, variable names should be nouns.
+- If the name contains more than one word, use underscores to separate the words.
 
 {{< include _includes/chapter-footer/variables-in-r.qmd >}}
