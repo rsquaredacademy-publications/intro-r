@@ -21,6 +21,7 @@ No new teaching content, headings, exercises or course links are added.
 | Data Types in R | `data-types-in-r.qmd` | 14 | 14 |
 | Vectors in R | `vectors-in-r.qmd` | 32 | 32 |
 | Dataframes in R | `data-frames-in-r.qmd` | 3 | 3 |
+| Install & Update R Packages | `install-update-r-packages.qmd` | 2 | 2 |
 
 ## Preface
 
@@ -140,6 +141,15 @@ Refusals: The pilot's three explicit refusals remain verbatim: the help exercise
 | `data-frames-in-r.qmd:27` | 9, 10 | Data frames are basically lists with elements of equal length and as such, they are heterogeneous. Let us create a dataframe: | Data frames are lists with elements of equal length, so they can hold different data types. Let us create a data frame: |
 
 Refusals: The short definition, inspection chunks and column/row demos stay. Headings retain Dataframes as required, while body prose uses data frame consistently. The stringsAsFactors history is retained, including its dates/numbers; reducing it or removing args() would be content/code work. All checks, webR content and footers are protected.
+
+## Install & Update R Packages
+
+| file:line | principle | before | after |
+| --- | --- | --- | --- |
+| `install-update-r-packages.qmd:19` | 1 | Packages from CRAN can be installed using `install.packages()`. | We can install packages from CRAN using `install.packages()`. |
+| `install-update-r-packages.qmd:37` | 9 | Use `update.packages()` to check for and install updates to your installed packages. | Use `update.packages()` to check for and install package updates. |
+
+Refusals: The install-once/load-each-session distinction and the missing-package remedy already read plainly. The quotation warning stays. No package sources or reference material are moved back from the appendix.
 
 ## Validation and remaining work
 

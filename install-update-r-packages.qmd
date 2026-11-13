@@ -16,7 +16,7 @@ Packages add functions and data to R. Install a package once on your computer, t
 
 ### CRAN
 
-Packages from CRAN can be installed using `install.packages()`. The name of the package must be enclosed in single or double quotes.
+We can install packages from CRAN using `install.packages()`. The name of the package must be enclosed in single or double quotes.
 
 ```{r install1, eval=FALSE}
 install.packages('ggplot2')
@@ -34,7 +34,7 @@ If `library(ggplot2)` reports `there is no package called 'ggplot2'`, install it
 
 ## Update Packages
 
-Use `update.packages()` to check for and install updates to your installed packages.
+Use `update.packages()` to check for and install package updates.
 
 ```{r package-update, eval=FALSE}
 update.packages()
