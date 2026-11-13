@@ -16,6 +16,7 @@ No new teaching content, headings, exercises or course links are added.
 | --- | --- | ---: | ---: |
 | Preface | `index.qmd` | 4 | 4 |
 | Introduction to R | `introduction-to-r.qmd` | 2 | 2 |
+| Install R & RStudio | `install-r-and-rstudio.qmd` | 2 | 2 |
 
 ## Preface
 
@@ -36,6 +37,15 @@ Refusals: The chapter-by-chapter reading guide, software-information placement, 
 | `introduction-to-r.qmd:24` | 9, 10 | [RStudio](https://posit.co/) is a very popular IDE (integrated development environment) built to suit the data science work flow. | [RStudio](https://posit.co/) is a popular IDE (integrated development environment) built for the data science workflow. |
 
 Refusals: The plain definition, chapter syllabus, RStudio/Positron introduction, illustration and footer already fit the voice. The conceptual Course companion wording (audit L-4) is already fixed.
+
+## Install R & RStudio
+
+| file:line | principle | before | after |
+| --- | --- | --- | --- |
+| `install-r-and-rstudio.qmd:7` | 9 | > - Install RStudio Desktop, after R itself is in place. | > - Install RStudio Desktop after installing R. |
+| `install-r-and-rstudio.qmd:8` | 3, 9 | > - Create an RStudio Project, so working directory, history, and settings > travel together in a single `.Rproj` file. | > - Create an RStudio Project to keep the working directory, history, and settings > together in a single `.Rproj` file. |
+
+Refusals: The short numbered-by-sequence installation instructions and Console checks already use plain imperatives. No screenshots, videos or platform-specific content are added.
 
 ## Validation and remaining work
 
