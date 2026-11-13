@@ -151,4 +151,4 @@ browseVignettes()
 RSiteSearch('glm')
 ```
 
-
+{{< include _includes/chapter-footer/getting-help-in-r.qmd >}}

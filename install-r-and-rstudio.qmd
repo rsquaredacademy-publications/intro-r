@@ -26,3 +26,5 @@ Follow these steps:
 - Open RStudio and create a new project via *File > New Project* (this creates
   an `.Rproj` file that keeps your working directory, history, and settings together).
 - Verify your setup by running `R.version.string` in the R console.
+
+{{< include _includes/chapter-footer/install-r-and-rstudio.qmd >}}

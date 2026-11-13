@@ -43,3 +43,5 @@ update.packages()
 []{#github} []{#bioconductor} []{#install-different-versions} []{#installed-packages} []{#library-paths} []{#install} []{#load} []{#remove-packages}
 
 For other package sources, archived versions and library paths, see [Package management](appendix-package-management.qmd).
+
+{{< include _includes/chapter-footer/install-update-r-packages.qmd >}}

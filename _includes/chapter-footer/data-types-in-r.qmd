@@ -1,0 +1,10 @@
+## Key points {.unnumbered}
+
+- Numeric, integer, character and logical values support different operations.
+- Use `class()` and the `is.*()` functions to inspect a value.
+- Use `as.*()` functions to convert values between types.
+- Use `Date` for calendar dates and `POSIXct` for date-times.
+
+**Next:** [Vectors in R](vectors-in-r.qmd)
+
+**Practise interactively:** [Course 1, lesson 4]({{< var course1_url >}})

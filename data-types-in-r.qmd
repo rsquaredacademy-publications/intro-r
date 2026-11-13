@@ -189,3 +189,5 @@ For date-times, use `as.POSIXct()`. Once you need to do arithmetic with dates â€
 finding differences, adding months, handling time zones â€” reach for the
 [lubridate](https://lubridate.tidyverse.org/) package, which provides a
 consistent, readable vocabulary for all of it.
+
+{{< include _includes/chapter-footer/data-types-in-r.qmd >}}

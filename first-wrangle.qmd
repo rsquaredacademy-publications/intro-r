@@ -131,3 +131,5 @@ each step in plain words is the fastest way to check you built the right one.
 > - Book: [R for Data Science (2e)](https://r4ds.hadley.nz/) — start at Chapter 1
 > - Courses: [Rsquared Academy](https://www.rsquaredacademy.com/) Data Wrangling series
 > - More books: [ebooks.rsquaredacademy.com](https://ebooks.rsquaredacademy.com/)
+
+{{< include _includes/chapter-footer/first-wrangle.qmd >}}

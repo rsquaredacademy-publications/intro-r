@@ -1,0 +1,7 @@
+## Key points {.unnumbered}
+
+- Install R from a CRAN mirror before installing RStudio Desktop.
+- Type `R.version.string` in the R or RStudio Console to verify the installation.
+- Create an RStudio Project to keep the working directory and settings together.
+
+**Next:** [Variables in R](variables-in-r.qmd)

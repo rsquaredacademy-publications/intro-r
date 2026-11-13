@@ -1,0 +1,10 @@
+## Key points {.unnumbered}
+
+- A data frame holds equal-length columns that can have different types.
+- Use `str()`, `dim()`, `nrow()` and `ncol()` to inspect its structure.
+- Use `[[` or `$` to extract a column as a vector; `students[1]` keeps a data frame.
+- In `students[rows, columns]`, the comma separates row and column selections.
+
+**Next:** [Install & Update R Packages](install-update-r-packages.qmd)
+
+**Practise interactively:** [Course 1, lesson 7]({{< var course1_url >}})

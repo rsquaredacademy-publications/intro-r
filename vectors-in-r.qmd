@@ -595,3 +595,5 @@ whole mean unknown. `na.rm = TRUE` drops the missing values first, leaving
 1, 3, 5, 2 — whose mean is 11 / 4 = 2.75. Decide deliberately whether dropping
 missing values is appropriate for your data.
 </details>
+
+{{< include _includes/chapter-footer/vectors-in-r.qmd >}}

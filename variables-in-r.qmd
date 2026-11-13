@@ -82,3 +82,5 @@ area
 - Variables are case sensitive; `average` and `Average` would be different variables.
 - Use names that are descriptive. Generally, variable names should be nouns.
 - If the name is made of more than one word, use underscore to separate the words.
+
+{{< include _includes/chapter-footer/variables-in-r.qmd >}}

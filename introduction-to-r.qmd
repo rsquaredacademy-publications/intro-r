@@ -33,4 +33,4 @@ alternative IDE for R and Python.
 </picture>
 </figure>
 
-
+{{< include _includes/chapter-footer/introduction-to-r.qmd >}}

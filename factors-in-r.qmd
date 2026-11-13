@@ -68,3 +68,5 @@ is.ordered(size)
 
 For modern factor manipulation (reordering, recoding, lumping rare levels),
 see the [forcats](https://forcats.tidyverse.org/) package.
+
+{{< include _includes/chapter-footer/factors-in-r.qmd >}}

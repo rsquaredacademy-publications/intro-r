@@ -198,5 +198,4 @@ categories and levels were alphabetised behind your back. Passing
 readable and portable to older R.
 </details>
 
-
-
+{{< include _includes/chapter-footer/data-frames-in-r.qmd >}}

@@ -1,0 +1,8 @@
+## Key points {.unnumbered}
+
+- Use `install.packages()` to install a package from CRAN on your computer.
+- Install once, then run `library()` in each session where you need the package.
+- A "there is no package called" error means you need to install that package before loading it.
+- Use `update.packages()` to check for and install package updates.
+
+**Next:** [RStudio Projects & Data Import](projects-import.qmd)

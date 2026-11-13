@@ -160,3 +160,5 @@ to read the second sheet.
 *Explanation:* `read_excel()` defaults to sheet 1; the `sheet` argument
 selects another sheet by position or name.
 </details>
+
+{{< include _includes/chapter-footer/projects-import.qmd >}}

@@ -1,0 +1,10 @@
+## Key points {.unnumbered}
+
+- A vector holds values of one type; mixing types can coerce its elements.
+- Name elements to select them by name as well as by position.
+- Positive indices select elements, negative indices exclude them, and logical indices keep matches.
+- Use `is.na()` to find missing values and `na.rm = TRUE` to exclude them from summaries.
+
+**Next:** [Dataframes in R](data-frames-in-r.qmd)
+
+**Practise interactively:** [Course 1, lesson 3]({{< var course1_url >}})

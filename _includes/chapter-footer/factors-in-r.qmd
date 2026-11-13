@@ -1,0 +1,8 @@
+## Key points {.unnumbered}
+
+- Factors represent categorical data with a set of levels.
+- Use `levels()` and `nlevels()` to inspect the categories.
+- Set `levels` and `ordered = TRUE` when categories have a natural order.
+- Use `labels` to choose display labels and `is.ordered()` to check ordering.
+
+**Next:** [Lists in R](lists-in-r.qmd)

@@ -128,3 +128,5 @@ stay readable and less error-prone.
 *Explanation:* One data declaration shared across layers beats repeating
 `data$column` for every variable, especially with facets and multiple geoms.
 </details>
+
+{{< include _includes/chapter-footer/first-plot.qmd >}}

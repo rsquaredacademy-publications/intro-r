@@ -170,3 +170,5 @@ What does `unlist(l, use.names = FALSE)` do differently from `unlist(l)`?
 the names it finds, so you get a named vector. Setting `use.names = FALSE` drops
 the names, which is usually what you want for further calculation.
 </details>
+
+{{< include _includes/chapter-footer/lists-in-r.qmd >}}
