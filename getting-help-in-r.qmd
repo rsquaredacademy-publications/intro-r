@@ -26,9 +26,9 @@ In the first section, we will look at online resources. We will then look at the
 
 [Stack Overflow](https://stackoverflow.com/questions/tagged/r) is a great place to visit if you are having trouble with R code or packages. Chances are high that someone has already encountered the same or similar problem and you can use the answers given by R experts. In case you have encountered a new problem or issue, you can ask for help by providing a reproducible example of your analysis along with the R code. Use the [reprex](https://reprex.tidyverse.org/) package to create reproducible examples. 
 
-### Twitter
+### Community help
 
-The R community is very active on Twitter/X and there are lot of R experts who are willing to help those who are new to R. Use the hashtag [#rstats](https://twitter.com/search?q=%23rstats) if you are asking for help or guidance on Twitter/X. Many community members are also active on Mastodon, Bluesky, and LinkedIn.
+Ask for help on [Posit Community](https://community.posit.co/) or [Stack Overflow](https://stackoverflow.com/questions/tagged/r), or use #rstats on Mastodon or Bluesky.
 
 ### RStudio Community
 
@@ -50,10 +50,6 @@ Visit [RWeekly](https://rweekly.org/) to get regular updates about the R communi
 ### R User Groups
 
 There are several R User Groups active across the globe. You can find the list [here](https://jumpingrivers.github.io/meetingsR/r-user-groups.html). Join the local user group to meet, discuss and learn from other R enthusiasts and experts.
-
-### Data Helpers
-
-[Data Helpers](http://www.datahelpers.org/) is a list of data analysts, scientists and engineers willing to offer guidance put together by Angela Bassa. Visit the website to learn more about how you can approach for help and guidance. (Note: this site appears unmaintained as of 2026; treat links there with caution.)
 
 ## Internal
 
