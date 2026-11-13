@@ -28,6 +28,7 @@ No new teaching content, headings, exercises or course links are added.
 | Factors in R | `factors-in-r.qmd` | 3 | 3 |
 | Lists in R | `lists-in-r.qmd` | 10 | 10 |
 | Getting Help in R | `getting-help-in-r.qmd` | 22 | 22 |
+| About the Author | `about-the-author.qmd` | 1 | 1 |
 
 ## Preface
 
@@ -239,6 +240,14 @@ Refusals: Let us try them one by one and the useful/heterogeneous definition are
 | `getting-help-in-r.qmd:142` | 2, 13 | `RSiteSearch()` will search for specified topics in help pages, vignettes and task views using the search engine at this [link](https://search.r-project.org/) and return the result in a browser. | `RSiteSearch()` searches for specified topics in help pages, vignettes and task views using the search engine at this [link](https://search.r-project.org/). It returns the result in a browser. |
 
 Refusals: The chapter orientation and Let us get started! hand-off stay. All resource targets, the R Bloggers first-place recommendation and functions remain; assessing current resource suitability would be content work. Audit L-2 is already resolved to distinct Stack Overflow and Posit Community sections. M-1 is now partly addressed: the lesson-5 callout/footer link is already absent, but the course-side mismatch needs desk follow-up. No functions/help chapter or new guidance is added.
+
+## About the Author
+
+| file:line | principle | before | after |
+| --- | --- | --- | --- |
+| `about-the-author.qmd:15` | 3 | free and open source education initiative with focus on data science and | free and open source education initiative with a focus on data science and |
+
+Refusals: The biography, degree wording, package credits, dates and all links remain. Third person is appropriate for a biography; it is not converted into the instructional we voice.
 
 ## Validation and remaining work
 
