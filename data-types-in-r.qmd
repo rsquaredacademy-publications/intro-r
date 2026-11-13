@@ -8,7 +8,7 @@
 > - Check a value's type with `is.numeric()`, `is.integer()`, `is.character()`,
 >   and `is.logical()`.
 > - Convert between types with `as.integer()`, `as.character()`, and friends.
-> - Explain implicit coercion when a vector mixes types.
+> - Know where to find [implicit coercion of mixed types](vectors-in-r.qmd#vector-coercion) in the next chapter.
 > - Create and format a date, and recognise `POSIXct` for date-times.
 
 Every value in R has a type, and the type decides what you can do with it. This
