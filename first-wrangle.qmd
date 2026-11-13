@@ -28,11 +28,8 @@ mpg |>
 
 ```{r summarise}
 mpg |>
-  summarise(mean_hwy = mean(hwy), n = dplyr::n())
+  summarise(mean_hwy = mean(hwy), n = n())
 ```
-
-> **Common Mistake:** `mean()` on a vector with `NA` returns `NA`.
-> Add `na.rm = TRUE` when missing values are present.
 
 ## Try it in your browser {.unnumbered}
 
@@ -99,7 +96,7 @@ flips it to descending, so the maximum comes first.
 </details>
 
 **Knowledge Check:** *`summarise()` collapses rows*
-How many rows does `mpg |> summarise(mean_hwy = mean(hwy), n = dplyr::n())`
+How many rows does `mpg |> summarise(mean_hwy = mean(hwy), n = n())`
 return, and why?
 
 <details>
