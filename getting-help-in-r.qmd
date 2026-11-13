@@ -11,10 +11,10 @@
 
 In this chapter, we will learn about the different methods of getting help in R. Often we get stuck while doing some analysis as either we do not know the correct function to use or its syntax. It is important for anyone who is new to R to know the right place to look for help. There are two ways to look for help in R:
 
-- built in help system
 - online
+- built in help system
 
-In the first section, we will look at various ways to access the built in help system of R. In the second section, we will look at various online resources that can supplement the built in help system. Let us get started!
+In the first section, we will look at online resources. We will then look at the built in help system and package documentation. Let us get started!
 
 ## Online Resources
 
