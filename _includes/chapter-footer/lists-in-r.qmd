@@ -1,0 +1,8 @@
+## Key points {.unnumbered}
+
+- A list can hold elements of different types without coercing them to one type.
+- Use `[[` to extract an element and `[` to keep a selection as a list.
+- Name list elements to access them with `$`.
+- Use `as.list()` to create a list and `unlist()` to flatten one into a vector.
+
+**Next:** [Getting Help in R](getting-help-in-r.qmd)

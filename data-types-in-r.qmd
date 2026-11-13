@@ -1,12 +1,14 @@
 # Data Types in R {#sec-data-types-in-r}
 
+> [Practise this interactively in Course 1 (Introduction to R), lesson 4]({{< var course1_url >}})
+
 > **Learning Objectives:** After this chapter you will be able to:
 >
 > - Create numeric, integer, character, and logical values.
 > - Check a value's type with `is.numeric()`, `is.integer()`, `is.character()`,
 >   and `is.logical()`.
 > - Convert between types with `as.integer()`, `as.character()`, and friends.
-> - Explain implicit coercion when a vector mixes types.
+> - Know where to find [implicit coercion of mixed types](vectors-in-r.qmd#vector-coercion) in the next chapter.
 > - Create and format a date, and recognise `POSIXct` for date-times.
 
 Every value in R has a type, and the type decides what you can do with it. This
@@ -162,7 +164,6 @@ today <- Sys.time()   # date time
 as.logical(age) 
 as.logical(score)
 as.logical(opt_course)
-as.logical(today)
 ```
 
 ## Date
@@ -177,14 +178,16 @@ today_date
 class(today_date)
 
 # create a date from a string
-independence_day <- as.Date("2026-01-15")
-independence_day
+launch_date <- as.Date("2026-03-01")
+launch_date
 
 # pretty-print a date
-format(independence_day, "%B %d, %Y")
+format(launch_date, "%B %d, %Y")
 ```
 
 For date-times, use `as.POSIXct()`. Once you need to do arithmetic with dates —
 finding differences, adding months, handling time zones — reach for the
 [lubridate](https://lubridate.tidyverse.org/) package, which provides a
 consistent, readable vocabulary for all of it.
+
+{{< include _includes/chapter-footer/data-types-in-r.qmd >}}

@@ -1,0 +1,10 @@
+## Key points {.unnumbered}
+
+- Use `filter()` for rows and `select()` for columns.
+- Use `mutate()` to add or change columns and `arrange()` to sort rows.
+- Use `summarise()` for summaries and `n()` for the row count.
+- The native pipe `|>` passes each result to the next step.
+
+**Next:** [Factors in R](factors-in-r.qmd)
+
+**Practise interactively:** [Course 1, lesson 9]({{< var course1_url >}})

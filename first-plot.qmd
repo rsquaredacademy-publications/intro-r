@@ -1,5 +1,7 @@
 # Your First Visualization {#sec-first-plot}
 
+> [Practise this interactively in Course 1 (Introduction to R), lesson 10]({{< var course1_url >}})
+
 > **Learning Objectives:** After this chapter you will be able to:
 >
 > - Load `ggplot2` and its bundled `mpg` dataset.
@@ -38,6 +40,8 @@ ggplot(mpg, aes(x = displ, y = hwy)) +
 Edit the code below and press **Run**. It executes entirely in your browser via
 [WebR](https://docs.r-wasm.org/webr/latest/) — no R installation needed. The
 runtime downloads once, on this page only.
+
+First run downloads the R runtime and any required packages (about 20 s); later runs reuse them.
 
 ```{webr-r}
 library(ggplot2)
@@ -124,3 +128,5 @@ stay readable and less error-prone.
 *Explanation:* One data declaration shared across layers beats repeating
 `data$column` for every variable, especially with facets and multiple geoms.
 </details>
+
+{{< include _includes/chapter-footer/first-plot.qmd >}}

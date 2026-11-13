@@ -28,17 +28,16 @@ mpg |>
 
 ```{r summarise}
 mpg |>
-  summarise(mean_hwy = mean(hwy), n = dplyr::n())
+  summarise(mean_hwy = mean(hwy), n = n())
 ```
-
-> **Common Mistake:** `mean()` on a vector with `NA` returns `NA`.
-> Add `na.rm = TRUE` when missing values are present.
 
 ## Try it in your browser {.unnumbered}
 
 Edit the code below and press **Run**. It executes entirely in your browser via
 [WebR](https://docs.r-wasm.org/webr/latest/) — no R installation needed. The
 runtime downloads once, on this page only.
+
+First run downloads the R runtime and any required packages (about 20 s); later runs reuse them.
 
 ```{webr-r}
 library(dplyr)
@@ -99,7 +98,7 @@ flips it to descending, so the maximum comes first.
 </details>
 
 **Knowledge Check:** *`summarise()` collapses rows*
-How many rows does `mpg |> summarise(mean_hwy = mean(hwy), n = dplyr::n())`
+How many rows does `mpg |> summarise(mean_hwy = mean(hwy), n = n())`
 return, and why?
 
 <details>
@@ -132,3 +131,5 @@ each step in plain words is the fastest way to check you built the right one.
 > - Book: [R for Data Science (2e)](https://r4ds.hadley.nz/) — start at Chapter 1
 > - Courses: [Rsquared Academy](https://www.rsquaredacademy.com/) Data Wrangling series
 > - More books: [ebooks.rsquaredacademy.com](https://ebooks.rsquaredacademy.com/)
+
+{{< include _includes/chapter-footer/first-wrangle.qmd >}}

@@ -1,0 +1,10 @@
+## Key points {.unnumbered}
+
+- Use `<-` to assign a value to a variable and the variable name to reuse it.
+- Changing a variable lets you repeat a calculation with a new value.
+- R already provides the constant `pi`.
+- Variable names are case sensitive; choose descriptive names such as `snake_case`.
+
+**Next:** [Data Types in R](data-types-in-r.qmd)
+
+**Practise interactively:** [Course 1, lesson 2]({{< var course1_url >}})

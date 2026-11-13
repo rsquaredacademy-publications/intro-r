@@ -1,0 +1,9 @@
+## Key points {.unnumbered}
+
+- R is a free and open source language for data analysis, visualization and modeling.
+- RStudio is an IDE that supports the data science workflow.
+- Positron is another IDE for working with R and Python.
+
+**Next:** [Install R & RStudio](install-r-and-rstudio.qmd)
+
+**Course companion:** [Course 1, lesson 0]({{< var course1_url >}})

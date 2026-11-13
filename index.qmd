@@ -15,12 +15,20 @@ description: "A beginner-friendly introduction to the R programming language."
 
 ## Structure of the book {.unnumbered}
 
-Chapter [Introduction to R](introduction-to-r.qmd) gives a quick overview of R and its evolution over the last 
-2 decades. Chapter [Install R & RStudio](install-r-and-rstudio.qmd) acts as a guide for installing R and 
-RStudio. Chapters [Variables in R](variables-in-r.qmd) and [Data Types in R](data-types-in-r.qmd) introduce the reader to 
-variables and data types in R. Chapter [Getting Help in R](getting-help-in-r.qmd) shows the right place and right
-way to ask for help. Chapters [Vectors in R](vectors-in-r.qmd) to [Lists in R](lists-in-r.qmd) introduce the basic 
-data structures in R. Chapter [Install & Update R Packages](install-update-r-packages.qmd) explores the R package system.
+Chapter [Introduction to R](introduction-to-r.qmd) gives a quick overview of R and its development tools.
+Chapter [Install R & RStudio](install-r-and-rstudio.qmd) acts as a guide for installing R and RStudio.
+Chapter [Variables in R](variables-in-r.qmd) introduces variables and assignment.
+Chapter [Data Types in R](data-types-in-r.qmd) introduces the types of values used in R.
+Chapter [Vectors in R](vectors-in-r.qmd) covers vectors, coercion, operations and indexing.
+Chapter [Dataframes in R](data-frames-in-r.qmd) covers creating and selecting rows and columns in data frames.
+Chapter [Install & Update R Packages](install-update-r-packages.qmd) covers installing, loading and updating packages.
+Chapter [RStudio Projects & Data Import](projects-import.qmd) covers portable paths and reading CSV and Excel files.
+Chapter [Your First Visualization](first-plot.qmd) introduces base R and ggplot2 graphics.
+Chapter [Your First Data Wrangling](first-wrangle.qmd) introduces dplyr verbs and the native pipe.
+Chapter [Factors in R](factors-in-r.qmd) covers categorical data, levels and labels.
+Chapter [Lists in R](lists-in-r.qmd) covers storing and extracting elements of different types.
+Chapter [Getting Help in R](getting-help-in-r.qmd) shows where and how to ask for help and find documentation.
+[About the Author](about-the-author.qmd) follows the chapters, and [Package management](appendix-package-management.qmd) collects reference material in an appendix.
 
 ## Software information {.unnumbered}
 

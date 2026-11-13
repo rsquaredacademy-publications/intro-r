@@ -1,0 +1,9 @@
+## Key points {.unnumbered}
+
+- An RStudio Project keeps paths relative to a shared project folder.
+- Use `here()` to build portable paths instead of hard-coding a working directory.
+- Read CSV files with `read_csv()` and Excel files with `read_excel()`.
+
+**Next:** [Your First Visualization](first-plot.qmd)
+
+**Practise interactively:** [Course 1, lesson 8]({{< var course1_url >}})

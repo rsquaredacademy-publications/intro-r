@@ -1,0 +1,145 @@
+# Package management {#sec-appendix-package-management}
+
+Reference material for managing packages, followed by background on R and its installation tools. For the basics, start with [Install & Update R Packages](install-update-r-packages.qmd).
+
+## Introduction
+
+This appendix covers package management beyond the basics. Packages are fundamental to R. There are more than 22,000 packages available on [CRAN](https://cran.r-project.org/) or the Comprehensive R Archive Network (as of September 2026; verify the current count at [cran.r-project.org/web/packages](https://cran.r-project.org/web/packages/)).
+
+Packages are available for different [topics](https://cran.r-project.org/web/views/). You should always look for a package before writing code from scratch. In case you have written your own codes for a new analysis or topic, do share it with the R community by converting the code into a package. You can learn more about building R packages from [R Packages](https://r-pkgs.org/), a book written by [Hadley Wickham](https://hadley.nz/).
+
+## Other package sources
+
+### GitHub
+
+Some R packages are made available on [GitHub](https://github.com/) before releasing them on CRAN. Such packages can be installed using `install_github()` from [devtools](https://cran.r-project.org/web/packages/devtools/index.html) or [remotes](https://cran.r-project.org/web/packages/remotes/index.html) package. You need to specify the name of the repository and the package. For example, to download [ggplot2](https://ggplot2.tidyverse.org/) or [dplyr](https://dplyr.tidyverse.org/), below is the code:
+
+```{r install2, eval=FALSE}
+devtools::install_github("tidyverse/ggplot2")
+remotes::install_github("tidyverse/dplyr")
+```
+
+### Bioconductor
+
+[Bioconductor](https://www.bioconductor.org/) provides tools for analysis and comprehension of high throughput genomic data. Install the `BiocManager` package and use `BiocManager::install()`:
+
+```{r install4, eval=FALSE}
+# install BiocManager if needed
+install.packages("BiocManager")
+
+# install a Bioconductor package
+BiocManager::install("GenomicFeatures")
+```
+
+> For faster installs with dependency resolution, you can also try `pak::pkg_install()` from the [pak](https://pak.r-lib.org/) package as a modern alternative.
+
+## Install Different Versions
+
+Now that we have learnt how to install packages, let us look at installing different versions of the same package.
+
+```{r install7, eval=FALSE}
+remotes::install_version('dplyr', version = "0.5.0")
+```
+
+If you want to install the latest release from GitHub, append `@*release` to the repository name. For example, to install the latest release of dplyr:
+
+```{r install8, eval=FALSE}
+remotes::install_github('tidyverse/dplyr@*release')
+```
+
+## Installed Packages
+
+- `installed.packages()`: view currently installed packages
+- `autoload('function_name', 'package_name')`: load functions and data from packages only when called in the script
+- `available.packages()`: packages available for installation
+- `old.packages()`: packages which have new versions available
+- `new.packages()`: packages already not installed
+- `remove.packages('package_name')`: remove installed packages
+
+## Library Paths
+
+Library is a directory that contains all installed packages. Usually there will be more than one R library in your system. You can find the location of the libraries using `.libPaths()`.
+
+```{r install9}
+.libPaths()
+```
+
+Use `lib` to install or remove packages in a particular library, and `lib.loc` to load or update them.
+
+### Install
+
+```{r install10, eval=FALSE}
+install.packages('stringr', lib = .libPaths()[1])
+```
+
+### Load
+
+```{r install11, eval=FALSE}
+library(lubridate, lib.loc = .libPaths()[1])
+```
+
+### Update Packages
+
+```{r install12, eval=FALSE}
+update.packages(lib.loc = .libPaths()[1])
+```
+
+### Remove Packages
+
+```{r install13, eval=FALSE}
+remove.packages('stringr', lib = .libPaths()[1])
+```
+
+> Explore Rsquared Academy's own R packages and guides at [pkgs.rsquaredacademy.com](https://pkgs.rsquaredacademy.com/).
+
+## R background and installation tools
+
+The rest of this appendix gives background on the organizations behind R and the tools used to install it.
+
+## Organizations
+
+### R Foundation
+
+R foundation is a not for profit organization founded by the members of the 
+R core team and is responsible for the continued development of R. It also 
+supports the annual useR conferences. You can learn more about the R foundation
+[here](https://www.r-project.org/foundation/).
+
+### R Consortium
+
+R consortium provides support to the R foundation and other key organizations
+and groups developing, maintaining and using R. It funds projects that improve
+the infrastructure around R and provides support to conferences and user groups
+around the world. You can learn more about R consortium [here](https://www.r-consortium.org/).
+
+
+## Installation
+
+R is available for Windows, Mac and is part of many Linux distributions. You 
+can download and install R from any of the CRAN mirrors listed [here](https://cran.r-project.org/mirrors.html).
+
+### CRAN
+
+[CRAN](https://cran.r-project.org/mirrors.html) stands for **C**omprehensive **R** 
+**A**rchive **N**etwork and you can download R and user contributed packages 
+from here for different operating systems. CRAN is pronounced as KRAN or C-RAN.
+
+
+### Extensions
+
+User contributed packages can be downloaded from
+
+- [CRAN](https://cran.r-project.org/mirrors.html)
+- [Bioconductor](https://bioconductor.org/)
+- [GitHub](https://github.com/topics/r?l=r)
+- [R-Forge](https://r-forge.r-project.org/)
+
+### R GUI
+
+R comes with a simple GUI with sufficient features for data analysis and 
+visualization.
+
+```{r gui, fig.align='center', echo=FALSE, fig.alt='Screenshot of the base R GUI window'}
+knitr::include_graphics('img/rgui.png')
+```
+

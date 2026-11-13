@@ -1,0 +1,8 @@
+## Key points {.unnumbered}
+
+- Use `help()` or `?` when you know the function name.
+- Use `help.search()` or `??` to search documentation by topic.
+- `library(help = ...)` and `vignette()` show documentation for installed packages.
+- When asking online, share your R code and a reproducible example.
+
+**Next:** [About the Author](about-the-author.qmd)

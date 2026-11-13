@@ -37,20 +37,22 @@ book:
         href: https://github.com/rsquaredacademy-publications/intro-r/
   chapters:
     - index.qmd
-    - about-the-author.qmd
     - introduction-to-r.qmd
     - install-r-and-rstudio.qmd
     - variables-in-r.qmd
     - data-types-in-r.qmd
-    - getting-help-in-r.qmd
     - vectors-in-r.qmd
     - data-frames-in-r.qmd
-    - factors-in-r.qmd
-    - lists-in-r.qmd
     - install-update-r-packages.qmd
     - projects-import.qmd
     - first-plot.qmd
     - first-wrangle.qmd
+    - factors-in-r.qmd
+    - lists-in-r.qmd
+    - getting-help-in-r.qmd
+    - about-the-author.qmd
+  appendices:
+    - appendix-package-management.qmd
   downloads: [pdf, epub]
 
 execute:

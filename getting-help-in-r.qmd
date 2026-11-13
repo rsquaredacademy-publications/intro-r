@@ -11,10 +11,10 @@
 
 In this chapter, we will learn about the different methods of getting help in R. Often we get stuck while doing some analysis as either we do not know the correct function to use or its syntax. It is important for anyone who is new to R to know the right place to look for help. There are two ways to look for help in R:
 
-- built in help system
 - online
+- built in help system
 
-In the first section, we will look at various ways to access the built in help system of R. In the second section, we will look at various online resources that can supplement the built in help system. Let us get started!
+In the first section, we will look at online resources. We will then look at the built in help system and package documentation. Let us get started!
 
 ## Online Resources
 
@@ -26,14 +26,10 @@ In the first section, we will look at various ways to access the built in help s
 
 [Stack Overflow](https://stackoverflow.com/questions/tagged/r) is a great place to visit if you are having trouble with R code or packages. Chances are high that someone has already encountered the same or similar problem and you can use the answers given by R experts. In case you have encountered a new problem or issue, you can ask for help by providing a reproducible example of your analysis along with the R code. Use the [reprex](https://reprex.tidyverse.org/) package to create reproducible examples. 
 
-### Twitter
+### Posit Community
 
-The R community is very active on Twitter/X and there are lot of R experts who are willing to help those who are new to R. Use the hashtag [#rstats](https://twitter.com/search?q=%23rstats) if you are asking for help or guidance on Twitter/X. Many community members are also active on Mastodon, Bluesky, and LinkedIn.
-
-### RStudio Community
-
-[RStudio Community](https://community.posit.co/) is similar to Stack Overflow. You can ask questions
-related to RStudio, Shiny and tidyverse.
+[Posit Community](https://community.posit.co/) is similar to Stack Overflow. You can ask questions
+related to RStudio, Shiny and tidyverse. You can also use #rstats on Mastodon or Bluesky.
 
 ### RStudio 
 
@@ -50,10 +46,6 @@ Visit [RWeekly](https://rweekly.org/) to get regular updates about the R communi
 ### R User Groups
 
 There are several R User Groups active across the globe. You can find the list [here](https://jumpingrivers.github.io/meetingsR/r-user-groups.html). Join the local user group to meet, discuss and learn from other R enthusiasts and experts.
-
-### Data Helpers
-
-[Data Helpers](http://www.datahelpers.org/) is a list of data analysts, scientists and engineers willing to offer guidance put together by Angela Bassa. Visit the website to learn more about how you can approach for help and guidance. (Note: this site appears unmaintained as of 2026; treat links there with caution.)
 
 ## Internal
 
@@ -117,7 +109,7 @@ example('mean')
 
 ### library
 
-Access the documentation of a package using `help()` inside `library()`. The package need not be installed for accessing the documentation.
+Access the documentation of a package using the `help` argument to `library()`. The package must be installed. For packages you have not installed, read the CRAN page or its pkgdown site.
 
 ```{r help6, eval=FALSE}
 library(help = 'ggplot2')
@@ -145,12 +137,12 @@ vignette('dplyr', package = 'dplyr')
 browseVignettes()
 ```
 
-### RsiteSearch
+### RSiteSearch
 
-`RsiteSearch()` will search for specified topics in help pages, vignettes and task views using the search engine at this  [link](https://search.r-project.org/) and return the result in a browser. 
+`RSiteSearch()` will search for specified topics in help pages, vignettes and task views using the search engine at this  [link](https://search.r-project.org/) and return the result in a browser.
 
 ```{r help10, eval=FALSE}
 RSiteSearch('glm')
 ```
 
-
+{{< include _includes/chapter-footer/getting-help-in-r.qmd >}}

@@ -1,5 +1,7 @@
 # Dataframes in R {#sec-data-frames-in-r}
 
+> [Practise this interactively in Course 1 (Introduction to R), lesson 7]({{< var course1_url >}})
+
 > **Learning Objectives:** After this chapter you will be able to:
 >
 > - Create a data frame from equal-length vectors.
@@ -87,11 +89,13 @@ Edit the code below and press **Run**. It executes entirely in your browser via
 [WebR](https://docs.r-wasm.org/webr/latest/) — no R installation needed. The
 runtime downloads once, on this page only.
 
+First run downloads the R runtime and any required packages (about 20 s); later runs reuse them.
+
 ```{webr-r}
 students <- data.frame(
-  name = c("Asha", "Ravi", "Meera", "Arjun"),
-  age = c(21, 22, 20, 23),
-  graduate = c(TRUE, TRUE, FALSE, TRUE)
+  name = c("John", "Jack", "Jill"),
+  age = c(29, 25, 27),
+  graduate = c(TRUE, TRUE, FALSE)
 )
 
 # rows and columns independently
@@ -194,5 +198,4 @@ categories and levels were alphabetised behind your back. Passing
 readable and portable to older R.
 </details>
 
-
-
+{{< include _includes/chapter-footer/data-frames-in-r.qmd >}}
