@@ -4,7 +4,7 @@ Reference material for managing packages, followed by background on R and its in
 
 ## Introduction
 
-In this chapter, we will learn about R packages. Packages are fundamental to R. There are more than 22,000 packages available on [CRAN](https://cran.r-project.org/) or the Comprehensive R Archive Network (as of September 2026; verify the current count at [cran.r-project.org/web/packages](https://cran.r-project.org/web/packages/)).
+This appendix covers package management beyond the basics. Packages are fundamental to R. There are more than 22,000 packages available on [CRAN](https://cran.r-project.org/) or the Comprehensive R Archive Network (as of September 2026; verify the current count at [cran.r-project.org/web/packages](https://cran.r-project.org/web/packages/)).
 
 Packages are available for different [topics](https://cran.r-project.org/web/views/). You should always look for a package before writing code from scratch. In case you have written your own codes for a new analysis or topic, do share it with the R community by converting the code into a package. You can learn more about building R packages from [R Packages](https://r-pkgs.org/), a book written by [Hadley Wickham](https://hadley.nz/).
 
@@ -64,7 +64,7 @@ Library is a directory that contains all installed packages. Usually there will 
 .libPaths()
 ```
 
-Use `lib` to install, update or remove packages from a particular library, and `lib.loc` to load them.
+Use `lib` to install or remove packages in a particular library, and `lib.loc` to load or update them.
 
 ### Install
 
@@ -81,7 +81,7 @@ library(lubridate, lib.loc = .libPaths()[1])
 ### Update Packages
 
 ```{r install12, eval=FALSE}
-update.packages(lib = .libPaths()[1])
+update.packages(lib.loc = .libPaths()[1])
 ```
 
 ### Remove Packages
@@ -93,6 +93,8 @@ remove.packages('stringr', lib = .libPaths()[1])
 > Explore Rsquared Academy's own R packages and guides at [pkgs.rsquaredacademy.com](https://pkgs.rsquaredacademy.com/).
 
 ## R background and installation tools
+
+The rest of this appendix gives background on the organizations behind R and the tools used to install it.
 
 ## Organizations
 

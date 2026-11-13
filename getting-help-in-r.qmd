@@ -1,7 +1,5 @@
 # Getting Help in R {#sec-getting-help-in-r}
 
-> [Practise this interactively in Course 1 (Introduction to R), lesson 5]({{< var course1_url >}})
-
 > **Learning Objectives:** After this chapter you will be able to:
 >
 > - Look up any known function with `?name` or `help()`.
@@ -28,14 +26,10 @@ In the first section, we will look at online resources. We will then look at the
 
 [Stack Overflow](https://stackoverflow.com/questions/tagged/r) is a great place to visit if you are having trouble with R code or packages. Chances are high that someone has already encountered the same or similar problem and you can use the answers given by R experts. In case you have encountered a new problem or issue, you can ask for help by providing a reproducible example of your analysis along with the R code. Use the [reprex](https://reprex.tidyverse.org/) package to create reproducible examples. 
 
-### Community help
+### Posit Community
 
-Ask for help on [Posit Community](https://community.posit.co/) or [Stack Overflow](https://stackoverflow.com/questions/tagged/r), or use #rstats on Mastodon or Bluesky.
-
-### RStudio Community
-
-[RStudio Community](https://community.posit.co/) is similar to Stack Overflow. You can ask questions
-related to RStudio, Shiny and tidyverse.
+[Posit Community](https://community.posit.co/) is similar to Stack Overflow. You can ask questions
+related to RStudio, Shiny and tidyverse. You can also use #rstats on Mastodon or Bluesky.
 
 ### RStudio 
 

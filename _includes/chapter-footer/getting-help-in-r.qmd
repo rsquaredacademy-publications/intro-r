@@ -6,5 +6,3 @@
 - When asking online, share your R code and a reproducible example.
 
 **Next:** [About the Author](about-the-author.qmd)
-
-**Practise interactively:** [Course 1, lesson 5]({{< var course1_url >}})

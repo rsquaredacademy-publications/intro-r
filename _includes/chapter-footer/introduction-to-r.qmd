@@ -6,4 +6,4 @@
 
 **Next:** [Install R & RStudio](install-r-and-rstudio.qmd)
 
-**Practise interactively:** [Course 1, lesson 0]({{< var course1_url >}})
+**Course companion:** [Course 1, lesson 0]({{< var course1_url >}})
