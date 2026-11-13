@@ -11,11 +11,11 @@
 
 ## Introduction
 
-Lists are very useful as they are heterogeneous i.e. they can contain different data types. Vectors and matrices are homogeneous i.e. they can contain only one type of data. A matrix is a rectangular arrangement of values of one type, with rows and columns. If you include different data types, they will all be coerced to the same type. With lists, it is different. In this chapter, we will delve deeper into lists.
+Lists are very useful as they are heterogeneous: they can contain different data types. Vectors and matrices are homogeneous: they can contain only one type of data. A matrix is a rectangular arrangement of values of one type, with rows and columns. If you include different data types in a vector or matrix, R coerces them to the same type. With lists, it is different. In this chapter, we will learn more about lists.
 
 ## Creating Lists
 
-To create a list, we use the `list()` function. Let us create a simple list to demonstrate how they can contain different data types.
+To create a list, we use the `list()` function. Let us create a simple list to demonstrate how it can contain different data types.
 
 ```{r list1}
 # numeric vector
@@ -35,7 +35,7 @@ l <- list(vect1, vect2, vect3, mat)
 l
 ```
 
-If you observe the output, all the elements of the list retain their data types. Now let us learn how to access the elements of the list.
+In the output, all the elements of the list retain their data types. Let us learn how to access the elements of the list.
 
 ## Access List Elements
 
@@ -55,7 +55,7 @@ l[[1]]
 l[1]
 ```
 
-`[[` extracts the element itself (which may be a vector, matrix, data frame, or nested list), while `[` returns a new list containing the selected element(s). The `$` operator can be used only when we have named elements in the list. Let us add names to the elements. Use the `names()` function to add names to the list.
+`[[` extracts the element itself (which may be a vector, matrix, data frame, or nested list), while `[` returns a new list containing the selected element(s). We can use the `$` operator only when we have named elements in the list. Let us add names to the elements using the `names()` function.
 
 ```{r list3}
 # named elements
@@ -74,7 +74,7 @@ l['vect1']
 
 ## Coerce other objects
 
-You can coerce other objects to list using `as.list()`.
+You can coerce other objects to a list using `as.list()`.
 
 ```{r list4}
 # vector

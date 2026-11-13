@@ -26,6 +26,7 @@ No new teaching content, headings, exercises or course links are added.
 | Your First Visualization | `first-plot.qmd` | 1 | 1 |
 | Your First Data Wrangling | `first-wrangle.qmd` | 2 | 2 |
 | Factors in R | `factors-in-r.qmd` | 3 | 3 |
+| Lists in R | `lists-in-r.qmd` | 10 | 10 |
 
 ## Preface
 
@@ -191,6 +192,23 @@ Refusals: The native-pipe rule, all examples, the webR lead-in and cell, and the
 | `factors-in-r.qmd:69` | 9, 10 | For modern factor manipulation (reordering, recoding, lumping rare levels), see the [forcats](https://forcats.tidyverse.org/) package. | To reorder, recode or lump rare levels, see the [forcats](https://forcats.tidyverse.org/) package. |
 
 Refusals: The level-order instruction, objectives and short examples stay. The chapter has no Practice Check; none is added. Motivating factors with a new ordering example would be content work, so the existing sequence is retained.
+
+## Lists in R
+
+| file:line | principle | before | after |
+| --- | --- | --- | --- |
+| `lists-in-r.qmd:14` | 3, 9 | Lists are very useful as they are heterogeneous i.e. they can contain different data types. | Lists are very useful as they are heterogeneous: they can contain different data types. |
+| `lists-in-r.qmd:14` | 3 | Vectors and matrices are homogeneous i.e. they can contain only one type of data. | Vectors and matrices are homogeneous: they can contain only one type of data. |
+| `lists-in-r.qmd:14` | 1, 6 | If you include different data types, they will all be coerced to the same type. | If you include different data types in a vector or matrix, R coerces them to the same type. |
+| `lists-in-r.qmd:14` | 9, 11 | In this chapter, we will delve deeper into lists. | In this chapter, we will learn more about lists. |
+| `lists-in-r.qmd:18` | 6 | Let us create a simple list to demonstrate how they can contain different data types. | Let us create a simple list to demonstrate how it can contain different data types. |
+| `lists-in-r.qmd:38` | 4, 9 | If you observe the output, all the elements of the list retain their data types. | In the output, all the elements of the list retain their data types. |
+| `lists-in-r.qmd:38` | §3a.8 | Now let us learn how to access the elements of the list. | Let us learn how to access the elements of the list. |
+| `lists-in-r.qmd:58` | 1 | The `$` operator can be used only when we have named elements in the list. | We can use the `$` operator only when we have named elements in the list. |
+| `lists-in-r.qmd:58` | 9 | Let us add names to the elements. Use the `names()` function to add names to the list. | Let us add names to the elements using the `names()` function. |
+| `lists-in-r.qmd:77` | 3 | You can coerce other objects to list using `as.list()`. | You can coerce other objects to a list using `as.list()`. |
+
+Refusals: Let us try them one by one and the useful/heterogeneous definition are kept as voice traits. The matrix definition from part 1 stays. The erroneous claim inside the protected as.list(matrix) answer that it splits into columns is recorded as a content follow-up, not silently fixed. No list names, data or snippets are changed.
 
 ## Validation and remaining work
 
