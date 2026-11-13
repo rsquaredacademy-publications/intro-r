@@ -162,7 +162,6 @@ today <- Sys.time()   # date time
 as.logical(age) 
 as.logical(score)
 as.logical(opt_course)
-as.logical(today)
 ```
 
 ## Date
@@ -177,11 +176,11 @@ today_date
 class(today_date)
 
 # create a date from a string
-independence_day <- as.Date("2026-01-15")
-independence_day
+launch_date <- as.Date("2026-03-01")
+launch_date
 
 # pretty-print a date
-format(independence_day, "%B %d, %Y")
+format(launch_date, "%B %d, %Y")
 ```
 
 For date-times, use `as.POSIXct()`. Once you need to do arithmetic with dates —
