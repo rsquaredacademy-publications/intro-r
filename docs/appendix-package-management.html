@@ -75,8 +75,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5e4ef2c717eb21ec6a4b05eba426a39c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-377f6d8191a04a916bc7fa7d5e65d799.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-077691391195616ccc305b3b5ddfe745.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-efc530f6b57c7f277d5b713d738dc89e.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -363,14 +363,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Reference material for managing packages, followed by background on R and its installation tools. For the basics, start with <a href="./install-update-r-packages.html">Install &amp; Update R Packages</a>.</p>
 <section id="introduction" class="level2" data-number="A.1">
 <h2 data-number="A.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">A.1</span> Introduction</h2>
-<p>This appendix covers package management beyond the basics. Packages are fundamental to R. There are more than 22,000 packages available on <a href="https://cran.r-project.org/">CRAN</a> or the Comprehensive R Archive Network (as of September 2026; verify the current count at <a href="https://cran.r-project.org/web/packages/">cran.r-project.org/web/packages</a>).</p>
-<p>Packages are available for different <a href="https://cran.r-project.org/web/views/">topics</a>. You should always look for a package before writing code from scratch. In case you have written your own codes for a new analysis or topic, do share it with the R community by converting the code into a package. You can learn more about building R packages from <a href="https://r-pkgs.org/">R Packages</a>, a book written by <a href="https://hadley.nz/">Hadley Wickham</a>.</p>
+<p>This appendix covers package management beyond the basics. Packages are fundamental to R. More than 22,000 packages are available on <a href="https://cran.r-project.org/">CRAN</a>, the Comprehensive R Archive Network (as of September 2026; verify the current count at <a href="https://cran.r-project.org/web/packages/">cran.r-project.org/web/packages</a>).</p>
+<p>Packages are available for different <a href="https://cran.r-project.org/web/views/">topics</a>. You should always look for a package before writing code from scratch. If you have written your own code for a new analysis or topic, do share it with the R community by converting it into a package. You can learn more about building R packages from <a href="https://r-pkgs.org/">R Packages</a>, a book by <a href="https://hadley.nz/">Hadley Wickham</a>.</p>
 </section>
 <section id="other-package-sources" class="level2" data-number="A.2">
 <h2 data-number="A.2" class="anchored" data-anchor-id="other-package-sources"><span class="header-section-number">A.2</span> Other package sources</h2>
 <section id="github" class="level3" data-number="A.2.1">
 <h3 data-number="A.2.1" class="anchored" data-anchor-id="github"><span class="header-section-number">A.2.1</span> GitHub</h3>
-<p>Some R packages are made available on <a href="https://github.com/">GitHub</a> before releasing them on CRAN. Such packages can be installed using <code>install_github()</code> from <a href="https://cran.r-project.org/web/packages/devtools/index.html">devtools</a> or <a href="https://cran.r-project.org/web/packages/remotes/index.html">remotes</a> package. You need to specify the name of the repository and the package. For example, to download <a href="https://ggplot2.tidyverse.org/">ggplot2</a> or <a href="https://dplyr.tidyverse.org/">dplyr</a>, below is the code:</p>
+<p>Some developers make R packages available on <a href="https://github.com/">GitHub</a> before releasing them on CRAN. We can install such packages using <code>install_github()</code> from the <a href="https://cran.r-project.org/web/packages/devtools/index.html">devtools</a> or <a href="https://cran.r-project.org/web/packages/remotes/index.html">remotes</a> package. You need to specify the name of the repository and the package. For example, we can download <a href="https://ggplot2.tidyverse.org/">ggplot2</a> or <a href="https://dplyr.tidyverse.org/">dplyr</a> with this code:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"tidyverse/ggplot2"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"tidyverse/dplyr"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -393,7 +393,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="install-different-versions" class="level2" data-number="A.3">
 <h2 data-number="A.3" class="anchored" data-anchor-id="install-different-versions"><span class="header-section-number">A.3</span> Install Different Versions</h2>
-<p>Now that we have learnt how to install packages, let us look at installing different versions of the same package.</p>
+<p>Now that we have learned how to install packages, let us look at installing different versions of the same package.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_version</span>(<span class="st">'dplyr'</span>, <span class="at">version =</span> <span class="st">"0.5.0"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -409,13 +409,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>autoload('function_name', 'package_name')</code>: load functions and data from packages only when called in the script</li>
 <li><code>available.packages()</code>: packages available for installation</li>
 <li><code>old.packages()</code>: packages which have new versions available</li>
-<li><code>new.packages()</code>: packages already not installed</li>
+<li><code>new.packages()</code>: packages not yet installed</li>
 <li><code>remove.packages('package_name')</code>: remove installed packages</li>
 </ul>
 </section>
 <section id="library-paths" class="level2" data-number="A.5">
 <h2 data-number="A.5" class="anchored" data-anchor-id="library-paths"><span class="header-section-number">A.5</span> Library Paths</h2>
-<p>Library is a directory that contains all installed packages. Usually there will be more than one R library in your system. You can find the location of the libraries using <code>.libPaths()</code>.</p>
+<p>A library is a directory that contains installed packages. Your system will usually have more than one R library. You can locate the libraries using <code>.libPaths()</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.libPaths</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -460,11 +460,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 data-number="A.7" class="anchored" data-anchor-id="organizations"><span class="header-section-number">A.7</span> Organizations</h2>
 <section id="r-foundation" class="level3" data-number="A.7.1">
 <h3 data-number="A.7.1" class="anchored" data-anchor-id="r-foundation"><span class="header-section-number">A.7.1</span> R Foundation</h3>
-<p>R foundation is a not for profit organization founded by the members of the R core team and is responsible for the continued development of R. It also supports the annual useR conferences. You can learn more about the R foundation <a href="https://www.r-project.org/foundation/">here</a>.</p>
+<p>The R Foundation is a not-for-profit organization founded by members of the R core team. It is responsible for the continued development of R. It also supports the annual useR conferences. You can learn more about the R Foundation <a href="https://www.r-project.org/foundation/">here</a>.</p>
 </section>
 <section id="r-consortium" class="level3" data-number="A.7.2">
 <h3 data-number="A.7.2" class="anchored" data-anchor-id="r-consortium"><span class="header-section-number">A.7.2</span> R Consortium</h3>
-<p>R consortium provides support to the R foundation and other key organizations and groups developing, maintaining and using R. It funds projects that improve the infrastructure around R and provides support to conferences and user groups around the world. You can learn more about R consortium <a href="https://www.r-consortium.org/">here</a>.</p>
+<p>The R Consortium supports the R Foundation and other key organizations and groups developing, maintaining and using R. It funds projects that improve the infrastructure around R and supports conferences and user groups around the world. You can learn more about the R Consortium <a href="https://www.r-consortium.org/">here</a>.</p>
 </section>
 </section>
 <section id="installation" class="level2" data-number="A.8">
@@ -472,7 +472,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>R is available for Windows, Mac and is part of many Linux distributions. You can download and install R from any of the CRAN mirrors listed <a href="https://cran.r-project.org/mirrors.html">here</a>.</p>
 <section id="cran" class="level3" data-number="A.8.1">
 <h3 data-number="A.8.1" class="anchored" data-anchor-id="cran"><span class="header-section-number">A.8.1</span> CRAN</h3>
-<p><a href="https://cran.r-project.org/mirrors.html">CRAN</a> stands for <strong>C</strong>omprehensive <strong>R</strong> <strong>A</strong>rchive <strong>N</strong>etwork and you can download R and user contributed packages from here for different operating systems. CRAN is pronounced as KRAN or C-RAN.</p>
+<p><a href="https://cran.r-project.org/mirrors.html">CRAN</a> stands for <strong>C</strong>omprehensive <strong>R</strong> <strong>A</strong>rchive <strong>N</strong>etwork. You can download R and user contributed packages from here for different operating systems. CRAN is pronounced as KRAN or C-RAN.</p>
 </section>
 <section id="extensions" class="level3" data-number="A.8.2">
 <h3 data-number="A.8.2" class="anchored" data-anchor-id="extensions"><span class="header-section-number">A.8.2</span> Extensions</h3>

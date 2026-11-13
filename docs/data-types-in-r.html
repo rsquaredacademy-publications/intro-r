@@ -76,8 +76,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5e4ef2c717eb21ec6a4b05eba426a39c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-377f6d8191a04a916bc7fa7d5e65d799.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-077691391195616ccc305b3b5ddfe745.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-efc530f6b57c7f277d5b713d738dc89e.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -350,13 +350,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Check a value’s type with <code>is.numeric()</code>, <code>is.integer()</code>, <code>is.character()</code>, and <code>is.logical()</code>.</li>
 <li>Convert between types with <code>as.integer()</code>, <code>as.character()</code>, and friends.</li>
 <li>Know where to find <a href="./vectors-in-r.html#vector-coercion">implicit coercion of mixed types</a> in the next chapter.</li>
-<li>Create and format a date, and recognise <code>POSIXct</code> for date-times.</li>
+<li>Create and format a date, and recognize <code>POSIXct</code> for date-times.</li>
 </ul>
 </blockquote>
 <p>Every value in R has a type, and the type decides what you can do with it. This chapter walks through the five you will meet first: <code>numeric</code> (double), <code>integer</code>, <code>character</code>, <code>logical</code>, and <code>date</code>/<code>time</code>. Most of the time you will let R infer the type for you, and then use the <code>is.*()</code> and <code>as.*()</code> functions to check or change it.</p>
 <section id="numeric" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="numeric"><span class="header-section-number">4.1</span> Numeric</h2>
-<p>In R, numbers are represented by the data type <code>numeric</code>. We will first create a variable and assign it a value. Next we will learn a few methods of checking the type of the variable.</p>
+<p>In R, we represent numbers with the data type <code>numeric</code>. We will first create a variable and assign it a value. Next we will learn how to check the type of the variable.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create two variables</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>number1 <span class="ot">&lt;-</span> <span class="fl">3.5</span></span>
@@ -381,7 +381,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>[1] TRUE</code></pre>
 </div>
 </div>
-<p>If you carefully observe, <code>integers</code> are also treated as <code>numeric/double</code>. We will learn to create integers in a while. In the meanwhile, we have introduced two new functions in the above example:</p>
+<p>In the example above, R also treats <code>integers</code> as <code>numeric/double</code>. We will learn to create integers in a while. We used two new functions in the example above:</p>
 <ul>
 <li><code>class()</code>: returns the <code>class</code> or <code>type</code></li>
 <li><code>is.numeric()</code>: tests whether the variable is of type <code>numeric</code></li>
@@ -389,7 +389,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="integer" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="integer"><span class="header-section-number">4.2</span> Integer</h2>
-<p>Unless specified otherwise, integers are treated as <code>numeric</code> or <code>double</code>. In this section, we will learn to create variables of the type <code>integer</code> and to convert other data types to <code>integer</code>.</p>
+<p>Unless specified otherwise, integers are treated as <code>numeric</code> or <code>double</code>. Let us create variables of the type <code>integer</code> and convert other data types to <code>integer</code>.</p>
 <ul>
 <li>create a variable <code>number1</code> and assign it the value <code>3</code></li>
 <li>check the data type of <code>number1</code> using <code>class</code></li>
@@ -426,7 +426,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="character" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="character"><span class="header-section-number">4.3</span> Character</h2>
-<p>Letters, words and group of words are represented by the data type <code>character</code>. All data of type <code>character</code> must be enclosed in single or double quotation marks. In fact any value enclosed in quotes will be treated as <code>character</code>. Let us create two variables to store the first and last name of some random guy.</p>
+<p>We represent letters, words and groups of words with the data type <code>character</code>. We enclose data of type <code>character</code> in single or double quotes. R treats any value enclosed in quotes as <code>character</code>. Let us create two variables to store a first and last name.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># first name</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>first_name <span class="ot">&lt;-</span> <span class="st">"jovial"</span></span>
@@ -475,13 +475,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.character</span>(today)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "2026-11-13 16:16:00.228271"</code></pre>
+<pre><code>[1] "2026-11-13 17:45:29.201576"</code></pre>
 </div>
 </div>
 </section>
 <section id="logical" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="logical"><span class="header-section-number">4.4</span> Logical</h2>
-<p>Logical data types take only 2 values. Either <code>TRUE</code> or <code>FALSE</code> (plus <code>NA</code> for missing values, giving three-valued logic in R). Such data types are created when we compare two objects in R using comparison or logical operators.</p>
+<p>Logical data types take only 2 values. Either <code>TRUE</code> or <code>FALSE</code> (plus <code>NA</code> for missing values, giving three-valued logic in R). We create such data types when we compare two objects in R using comparison or logical operators.</p>
 <ul>
 <li>create two variables <code>x</code> and <code>y</code></li>
 <li>assign them the values <code>TRUE</code> and <code>FALSE</code> respectively</li>
@@ -503,7 +503,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>[1] TRUE</code></pre>
 </div>
 </div>
-<p>The outcome of comparison operators is always <code>logical</code>. In the below example, we compare two numbers to see the outcome.</p>
+<p>The outcome of comparison operators is always <code>logical</code>. In the example below, we compare two numbers to see the outcome.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create two numeric variables</span></span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">3</span></span>
@@ -525,7 +525,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>[1] "logical"</code></pre>
 </div>
 </div>
-<p><code>TRUE</code> is represented by all numbers except <code>0</code>. <code>FALSE</code> is represented only by <code>0</code> and no other numbers.</p>
+<p><code>TRUE</code> is represented by all numbers except <code>0</code>. <code>FALSE</code> is represented only by <code>0</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># TRUE and FALSE are represented by 1 and 0</span></span>
 <span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">as.logical</span>(<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -599,7 +599,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>[1] "March 01, 2026"</code></pre>
 </div>
 </div>
-<p>For date-times, use <code>as.POSIXct()</code>. Once you need to do arithmetic with dates — finding differences, adding months, handling time zones — reach for the <a href="https://lubridate.tidyverse.org/">lubridate</a> package, which provides a consistent, readable vocabulary for all of it.</p>
+<p>For date-times, use <code>as.POSIXct()</code>. For arithmetic with dates, such as finding differences, adding months or handling time zones, use the <a href="https://lubridate.tidyverse.org/">lubridate</a> package.</p>
 </section>
 <section id="key-points" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="key-points">Key points</h2>

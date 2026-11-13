@@ -76,8 +76,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5e4ef2c717eb21ec6a4b05eba426a39c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-377f6d8191a04a916bc7fa7d5e65d799.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-077691391195616ccc305b3b5ddfe745.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-efc530f6b57c7f277d5b713d738dc89e.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -353,7 +353,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 <section id="introduction" class="level2" data-number="11.1">
 <h2 data-number="11.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">11.1</span> Introduction</h2>
-<p>Categorical or qualitative data in R is treated as data type <code>factor</code>.</p>
+<p>In R, we represent categorical or qualitative data with the data type <code>factor</code>.</p>
 </section>
 <section id="create-factors" class="level2" data-number="11.2">
 <h2 data-number="11.2" class="anchored" data-anchor-id="create-factors"><span class="header-section-number">11.2</span> Create Factors</h2>
@@ -403,7 +403,7 @@ Levels: Low &lt; Medium &lt; High</code></pre>
 </section>
 <section id="specify-labels" class="level2" data-number="11.4">
 <h2 data-number="11.4" class="anchored" data-anchor-id="specify-labels"><span class="header-section-number">11.4</span> Specify Labels</h2>
-<p>Use the <code>labels</code> argument to attach shorter or prettier display labels while keeping the underlying level order:</p>
+<p>Use the <code>labels</code> argument to attach shorter display labels while keeping the underlying level order:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>size_labeled <span class="ot">&lt;-</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">'Low'</span>, <span class="st">'Medium'</span>, <span class="st">'High'</span>),</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">'Low'</span>, <span class="st">'Medium'</span>, <span class="st">'High'</span>), <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'L'</span>, <span class="st">'M'</span>, <span class="st">'H'</span>))</span>
@@ -433,7 +433,7 @@ Levels: L M H</code></pre>
 <pre><code>[1] TRUE</code></pre>
 </div>
 </div>
-<p>For modern factor manipulation (reordering, recoding, lumping rare levels), see the <a href="https://forcats.tidyverse.org/">forcats</a> package.</p>
+<p>To reorder, recode or lump rare levels, see the <a href="https://forcats.tidyverse.org/">forcats</a> package.</p>
 </section>
 <section id="key-points" class="level2 unnumbered">
 <h2 class="unnumbered anchored" data-anchor-id="key-points">Key points</h2>

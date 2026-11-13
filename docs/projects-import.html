@@ -76,8 +76,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5e4ef2c717eb21ec6a4b05eba426a39c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-377f6d8191a04a916bc7fa7d5e65d799.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-077691391195616ccc305b3b5ddfe745.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-efc530f6b57c7f277d5b713d738dc89e.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -2196,7 +2196,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </div>
 <section id="why-avoid-setwd" class="level2" data-number="8.1">
 <h2 data-number="8.1" class="anchored" data-anchor-id="why-avoid-setwd"><span class="header-section-number">8.1</span> Why avoid <code>setwd()</code></h2>
-<p><code>setwd("C:/Users/you/project")</code> hard-codes a path that exists only on your machine. Anyone else who opens the script — or you on a different computer — gets an error. An RStudio Project (<code>.Rproj</code>) fixes this: opening the <code>.Rproj</code> file sets the working directory to the project folder automatically, so relative paths just work.</p>
+<p><code>setwd("C:/Users/you/project")</code> hard-codes a path that exists only on your machine. Anyone opening the script on a different computer gets an error. An RStudio Project (<code>.Rproj</code>) fixes this: opening the <code>.Rproj</code> file sets the working directory to the project folder automatically, so relative paths work.</p>
 <p><strong>Workflow:</strong> File → New Project → New Directory (or Existing Directory) → give it a name. From then on, open the <code>.Rproj</code> file, not individual scripts.</p>
 </section>
 <section id="portable-paths-with-here" class="level2" data-number="8.2">
@@ -2232,7 +2232,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </section>
 <section id="reading-excel-files" class="level2" data-number="8.4">
 <h2 data-number="8.4" class="anchored" data-anchor-id="reading-excel-files"><span class="header-section-number">8.4</span> Reading Excel files</h2>
-<p><code>read_excel()</code> works the same way for <code>.xlsx</code> files — sheet 1 by default:</p>
+<p><code>read_excel()</code> works the same way for <code>.xlsx</code> files. It reads sheet 1 by default:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>students_xl <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"students.xlsx"</span>))</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>students_xl</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

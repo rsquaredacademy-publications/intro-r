@@ -76,8 +76,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5e4ef2c717eb21ec6a4b05eba426a39c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-377f6d8191a04a916bc7fa7d5e65d799.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-077691391195616ccc305b3b5ddfe745.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-efc530f6b57c7f277d5b713d738dc89e.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -354,11 +354,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </blockquote>
 <section id="introduction" class="level2" data-number="12.1">
 <h2 data-number="12.1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">12.1</span> Introduction</h2>
-<p>Lists are very useful as they are heterogeneous i.e.&nbsp;they can contain different data types. Vectors and matrices are homogeneous i.e.&nbsp;they can contain only one type of data. A matrix is a rectangular arrangement of values of one type, with rows and columns. If you include different data types, they will all be coerced to the same type. With lists, it is different. In this chapter, we will delve deeper into lists.</p>
+<p>Lists are very useful as they are heterogeneous: they can contain different data types. Vectors and matrices are homogeneous: they can contain only one type of data. A matrix is a rectangular arrangement of values of one type, with rows and columns. If you include different data types in a vector or matrix, R coerces them to the same type. With lists, it is different. In this chapter, we will learn more about lists.</p>
 </section>
 <section id="creating-lists" class="level2" data-number="12.2">
 <h2 data-number="12.2" class="anchored" data-anchor-id="creating-lists"><span class="header-section-number">12.2</span> Creating Lists</h2>
-<p>To create a list, we use the <code>list()</code> function. Let us create a simple list to demonstrate how they can contain different data types.</p>
+<p>To create a list, we use the <code>list()</code> function. Let us create a simple list to demonstrate how it can contain different data types.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># numeric vector</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>vect1 <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
@@ -392,7 +392,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 [3,]    3    6    9</code></pre>
 </div>
 </div>
-<p>If you observe the output, all the elements of the list retain their data types. Now let us learn how to access the elements of the list.</p>
+<p>In the output, all the elements of the list retain their data types. Let us learn how to access the elements of the list.</p>
 </section>
 <section id="access-list-elements" class="level2" data-number="12.3">
 <h2 data-number="12.3" class="anchored" data-anchor-id="access-list-elements"><span class="header-section-number">12.3</span> Access List Elements</h2>
@@ -416,7 +416,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
 </div>
 </div>
-<p><code>[[</code> extracts the element itself (which may be a vector, matrix, data frame, or nested list), while <code>[</code> returns a new list containing the selected element(s). The <code>$</code> operator can be used only when we have named elements in the list. Let us add names to the elements. Use the <code>names()</code> function to add names to the list.</p>
+<p><code>[[</code> extracts the element itself (which may be a vector, matrix, data frame, or nested list), while <code>[</code> returns a new list containing the selected element(s). We can use the <code>$</code> operator only when we have named elements in the list. Let us add names to the elements using the <code>names()</code> function.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># named elements</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(l) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'vect1'</span>, <span class="st">'vect2'</span>, <span class="st">'vect3'</span>, <span class="st">'mat'</span>)</span>
@@ -457,7 +457,7 @@ $mat
 </section>
 <section id="coerce-other-objects" class="level2" data-number="12.4">
 <h2 data-number="12.4" class="anchored" data-anchor-id="coerce-other-objects"><span class="header-section-number">12.4</span> Coerce other objects</h2>
-<p>You can coerce other objects to list using <code>as.list()</code>.</p>
+<p>You can coerce other objects to a list using <code>as.list()</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># vector</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>vect1 <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span></span>
@@ -581,7 +581,7 @@ Click to reveal answer
 Click to reveal answer
 </summary>
 <p><strong>Answer:</strong> <code>as.list(vect1)</code>, which gives a list of ten single numbers.</p>
-<em>Explanation:</em> <code>as.list()</code> splits the vector into its individual elements. The same call works on a matrix, in which case it splits the matrix into columns. The reverse direction is <code>unlist()</code>.
+<em>Explanation:</em> <code>as.list()</code> splits the vector into its individual elements. The same call works on a matrix, in which case every value of the matrix becomes its own element (nine elements for a 3 x 3 matrix, taken column by column). The reverse direction is <code>unlist()</code>.
 </details>
 <p><strong>Knowledge Check:</strong> <em>Flattening a list</em> What does <code>unlist(l, use.names = FALSE)</code> do differently from <code>unlist(l)</code>?</p>
 <details>
