@@ -25,6 +25,7 @@ No new teaching content, headings, exercises or course links are added.
 | RStudio Projects & Data Import | `projects-import.qmd` | 3 | 3 |
 | Your First Visualization | `first-plot.qmd` | 1 | 1 |
 | Your First Data Wrangling | `first-wrangle.qmd` | 2 | 2 |
+| Factors in R | `factors-in-r.qmd` | 3 | 3 |
 
 ## Preface
 
@@ -180,6 +181,16 @@ Refusals: The short geometry instruction, bundled-data warning, figures, browser
 | `first-wrangle.qmd:131` | 13 | > - Book: [R for Data Science (2e)](https://r4ds.hadley.nz/) — start at Chapter 1 | > - Book: [R for Data Science (2e)](https://r4ds.hadley.nz/), starting at Chapter 1 |
 
 Refusals: The native-pipe rule, all examples, the webR lead-in and cell, and the next-course hand-off stay. The five verbs need additional teaching prose, but supplying it would be new content. Practice Checks, including their informal explanations, are protected.
+
+## Factors in R
+
+| file:line | principle | before | after |
+| --- | --- | --- | --- |
+| `factors-in-r.qmd:14` | 1, 3 | Categorical or qualitative data in R is treated as data type `factor`. | In R, we represent categorical or qualitative data with the data type `factor`. |
+| `factors-in-r.qmd:47` | 9 | Use the `labels` argument to attach shorter or prettier display labels while keeping the underlying level order: | Use the `labels` argument to attach shorter display labels while keeping the underlying level order: |
+| `factors-in-r.qmd:69` | 9, 10 | For modern factor manipulation (reordering, recoding, lumping rare levels), see the [forcats](https://forcats.tidyverse.org/) package. | To reorder, recode or lump rare levels, see the [forcats](https://forcats.tidyverse.org/) package. |
+
+Refusals: The level-order instruction, objectives and short examples stay. The chapter has no Practice Check; none is added. Motivating factors with a new ordering example would be content work, so the existing sequence is retained.
 
 ## Validation and remaining work
 
