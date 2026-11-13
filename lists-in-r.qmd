@@ -11,7 +11,7 @@
 
 ## Introduction
 
-Lists are very useful as they are heterogeneous i.e. they can contain different data types. If you remember, vectors and matrices are homogeneous i.e. they can contain only one type of data. If you include different data types, they will all be coerced to the same type. With lists, it is different. In this chapter, we will delve deeper into lists.
+Lists are very useful as they are heterogeneous i.e. they can contain different data types. Vectors and matrices are homogeneous i.e. they can contain only one type of data. A matrix is a rectangular arrangement of values of one type, with rows and columns. If you include different data types, they will all be coerced to the same type. With lists, it is different. In this chapter, we will delve deeper into lists.
 
 ## Creating Lists
 

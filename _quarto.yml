@@ -51,6 +51,8 @@ book:
     - first-plot.qmd
     - first-wrangle.qmd
     - about-the-author.qmd
+  appendices:
+    - appendix-package-management.qmd
   downloads: [pdf, epub]
 
 execute:
