@@ -75,7 +75,7 @@ if (!file.exists("students.csv")) {
 students <- read_csv("students.csv", show_col_types = FALSE)
 students
 
-# column types are parsed, not guessed at read time
+# check the type readr chose for each column
 sapply(students, class)
 ```
 

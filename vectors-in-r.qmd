@@ -264,7 +264,7 @@ complete.cases(vect1)
 
 ### Omit missing data
 
-In the presence of missing data, all computations in R will return `NA`. To avoid this, we might want to remove the missing data before doing any computation. `na.omit()` will remove all missing values from the data. Let us look at an example:
+Most summary functions (`mean()`, `sum()`, `max()`) return `NA` when any value is missing. To avoid this, we might want to remove the missing data before doing any computation. `na.omit()` will remove all missing values from the data. Let us look at an example:
 
 ```{r vect16, collapse=TRUE}
 # vector with missing values
