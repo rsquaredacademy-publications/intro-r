@@ -5,4 +5,4 @@
 - `library(help = ...)` and `vignette()` show documentation for installed packages.
 - When asking online, share your R code and a reproducible example.
 
-**Next:** [About the Author](about-the-author.qmd)
+**Next:** [Errors and Debugging](errors-and-debugging.qmd)

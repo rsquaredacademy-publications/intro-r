@@ -24,7 +24,7 @@ In the first section, we will look at online resources. We will then look at the
 
 ### Stack Overflow
 
-[Stack Overflow](https://stackoverflow.com/questions/tagged/r) is a place to ask for help with R code or packages. Someone may have encountered a similar problem, and you can use the answers given by R experts. If you encounter a new problem, you can ask for help by providing a reproducible example of your analysis along with the R code. Use the [reprex](https://reprex.tidyverse.org/) package to create reproducible examples.
+[Stack Overflow](https://stackoverflow.com/questions/tagged/r) is a place to ask for help with R code or packages. Someone may have encountered a similar problem, and you can use the answers given by R experts. If you encounter a new problem, you can ask for help by providing a reproducible example of your analysis along with the R code. The [Errors and Debugging](errors-and-debugging.qmd#make-a-reprex) chapter shows how to build one.
 
 ### Posit Community
 

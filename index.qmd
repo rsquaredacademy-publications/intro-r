@@ -29,6 +29,7 @@ Chapter [Your First Data Wrangling](first-wrangle.qmd) introduces dplyr verbs an
 Chapter [Factors in R](factors-in-r.qmd) covers categorical data, levels and labels.
 Chapter [Lists in R](lists-in-r.qmd) covers storing and extracting elements of different types.
 Chapter [Getting Help in R](getting-help-in-r.qmd) shows where and how to ask for help and find documentation.
+Chapter [Errors and Debugging](errors-and-debugging.qmd) shows how to read error messages, fix common mistakes, and ask a question that gets an answer.
 [About the Author](about-the-author.qmd) follows the chapters, and [Package management](appendix-package-management.qmd) collects reference material in an appendix.
 
 ## Software information {.unnumbered}
