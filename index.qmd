@@ -18,6 +18,7 @@ description: "A beginner-friendly introduction to the R programming language."
 Chapter [Introduction to R](introduction-to-r.qmd) gives a quick overview of R and its development tools.
 Chapter [Install R & RStudio](install-r-and-rstudio.qmd) guides you through installing R and RStudio.
 Chapter [Variables in R](variables-in-r.qmd) introduces variables and assignment.
+Chapter [R as a Calculator and Using Functions](r-as-a-calculator.qmd) covers arithmetic, operator precedence, and calling functions.
 Chapter [Data Types in R](data-types-in-r.qmd) introduces the types of values used in R.
 Chapter [Vectors in R](vectors-in-r.qmd) covers vectors, coercion, operations and indexing.
 Chapter [Dataframes in R](data-frames-in-r.qmd) covers creating and selecting rows and columns in data frames.

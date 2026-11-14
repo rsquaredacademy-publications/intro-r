@@ -11,6 +11,7 @@ Read the live book: https://intro-r.rsquaredacademy.com
 | Introduction to R | R's history, RStudio/Positron |
 | Install R & RStudio | Setup with video + text fallback |
 | Variables in R | Naming rules, assignment |
+| R as a Calculator and Using Functions | Operators, precedence, arguments |
 | Data Types in R | Logical, numeric, character, Date |
 | Getting Help in R | Built-in help + online resources |
 | Vectors in R | Coercion, operations, indexing |
