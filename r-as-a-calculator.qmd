@@ -27,7 +27,7 @@ R uses the symbols you already know for the four basic operations, and two more 
 - `/` divides: `7 / 5` gives `1.4`
 - `^` raises to a power: `7^2` gives `49`
 - `%%` gives the remainder after division
-- `%/%` gives the whole-number part of a division
+- `%/%` divides and rounds down to a whole number
 
 Let us start with the first five:
 
@@ -54,9 +54,11 @@ The other two operators look odd, but they answer common questions:
 7 %/% 2
 ```
 
-`/` does not round. `7 / 5` keeps the decimals, and `%/%` is the operator that throws them away.
+`/` does not round. `7 / 5` keeps the decimals, while `%/%` returns a whole number.
 
 `7 %% 2` is `1`, because 2 goes into 7 three times and 1 is left over. `7 %/% 2` is `3`, because 2 fits three whole times. The two answers fit together: `3 * 2 + 1` is back to `7`.
+
+`%/%` rounds down rather than towards zero, so negative numbers behave differently: `-7 %/% 2` is `-4`, because `-3.5` rounds down to `-4`. Keep both values positive while you are learning the operator.
 
 Use `%%` to test whether a number is even (`x %% 2 == 0`) or to group values into buckets. Use `%/%` when you want complete groups, such as full boxes of twelve.
 

@@ -1,7 +1,7 @@
 ## Key points {.unnumbered}
 
 - R evaluates arithmetic in a fixed order: brackets, powers, `%%` and `%/%`, then `*` and `/`, then `+` and `-`.
-- `%%` gives the remainder after division and `%/%` gives the whole-number part.
+- `%%` gives the remainder after division and `%/%` divides and rounds down to a whole number.
 - Arguments can be passed by position or by name; names free you from the order.
 - The Usage section of a help page lists the arguments and their defaults.
 - Nest calls when the line still reads like a sentence; use a variable when it does not.
