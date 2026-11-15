@@ -62,7 +62,7 @@ Use `%%` to test whether a number is even (`x %% 2 == 0`) or to group values int
 
 ## Precedence and Brackets
 
-R evaluates an expression in a fixed order: brackets first, then powers, then multiplication and division, then addition and subtraction.
+R evaluates an expression in a fixed order: brackets first, then powers, then `%%` and `%/%`, then multiplication and division, then addition and subtraction.
 
 ```{r calc3}
 # multiplication before addition
@@ -85,6 +85,18 @@ R evaluates an expression in a fixed order: brackets first, then powers, then mu
 The minus sign in `-3^2` applies after the power, so the answer is `-9`. Write `(-3)^2` when you want `9`.
 
 Multiplication and division have the same rank, and R works from left to right. `12 / 4 * 3` is `9`, not `1`, because the division happens first.
+
+`%%` and `%/%` rank above `*` and `/`, which is easy to miss:
+
+```{r calc2-order}
+# %/% runs before *
+2 * 3 %/% 2
+
+# brackets change which step runs first
+(2 * 3) %/% 2
+```
+
+`2 * 3 %/% 2` is `2`, because `3 %/% 2` is computed first and gives `1`; then `2 * 1` is `2`. With the brackets, `6 %/% 2` gives `3`. The same trap catches `10 / 3 %/% 2`, which is `10`, not `1`.
 
 When you are unsure, add brackets. They cost nothing, and they show the next reader what you meant.
 

@@ -1,6 +1,6 @@
 ## Key points {.unnumbered}
 
-- R evaluates arithmetic in the order you learned at school: brackets, powers, then `*` and `/`, then `+` and `-`.
+- R evaluates arithmetic in a fixed order: brackets, powers, `%%` and `%/%`, then `*` and `/`, then `+` and `-`.
 - `%%` gives the remainder after division and `%/%` gives the whole-number part.
 - Arguments can be passed by position or by name; names free you from the order.
 - The Usage section of a help page lists the arguments and their defaults.
