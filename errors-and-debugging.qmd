@@ -207,7 +207,17 @@ counts <- c("120", "150", "n/a")
 as.numeric(counts)
 ```
 
-The warning is `NAs introduced by coercion`. R converted what it could and put `NA` where the text was not a number. The vector still exists, and every later `mean()` will return `NA` because of it.
+The warning is `NAs introduced by coercion`. R converted what it could and put `NA` where the text was not a number, then printed the result. It did not store it, so `counts` itself is still text.
+
+That is why `mean(counts)` warns a second time, `argument is not numeric or logical: returning NA`. The default `na.rm = FALSE` is not the cause here, and `na.rm = TRUE` does not help either, because the whole vector is the wrong type. Save the conversion when later code needs the numbers:
+
+```{r err-warning-fix}
+#| warning: true
+numbers <- as.numeric(counts)
+mean(numbers, na.rm = TRUE)
+```
+
+The conversion warning appears again, because `n/a` still cannot become a number. This time the result is stored, so the mean of the good values comes back as `135`.
 
 Treat a warning as a question. Was the conversion intended? If not, fix the data before it spreads.
 
