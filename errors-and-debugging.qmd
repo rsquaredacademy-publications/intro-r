@@ -232,7 +232,7 @@ A message does not stop the code and does not mean anything is wrong. This book 
 
 ## Shrink the Problem
 
-A bug in a 60-line script can take an hour. The same bug in 3 lines takes a minute. Shrink first.
+A bug in a 60-line script can hide in any of the 60 lines. The same bug in 3 lines is easy to find. We shrink the problem first.
 
 1. Read the message twice, then read it again for the words after `Error`.
 2. Find the line. In RStudio, run the script one line at a time until it fails.
@@ -264,7 +264,7 @@ stores[[4]]
 
 Without the package, the same block typed by hand is a reprex: the code, a line with your R version, and the message copied from the Console.
 
-No screenshots, and no "it does not work" without the message. Paste the text, message included.
+We send no screenshots, and no "it does not work" without the message. We paste the text, message included.
 
 ## Find the Bug
 

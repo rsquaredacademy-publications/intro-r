@@ -147,7 +147,7 @@ round(digits = 2, x = 3.14159)
 
 All three lines return `3.14`. Position matters only when you leave the names out. Put the number first and R assumes it is `x`.
 
-Names make a call easier to read, and they let you skip an argument in the middle. A call with four unnamed numbers is a puzzle; the same call with names is a sentence.
+Names make a call easier to read, and they let us skip an argument in the middle. A call with four unnamed numbers is a puzzle; the same call with names is a sentence.
 
 ## Defaults and the Usage Section
 
