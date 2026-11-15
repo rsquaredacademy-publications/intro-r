@@ -117,7 +117,7 @@ sqrt(16)
 mean(c(4, 8, 6))
 ```
 
-`round()` keeps two decimal places, `sqrt()` returns the square root, and `mean()` returns the average. `mean()` needs several numbers at once, so we hand it a vector built with `c()`. Read `c(4, 8, 6)` as "the three numbers 4, 8 and 6". [Vectors in R](vectors-in-r.qmd) covers vectors in full.
+`round()` keeps two decimal places, `sqrt()` returns the square root, and `mean()` returns the average. In the third line we give `mean()` three numbers at once, in a vector built with `c()`. Read `c(4, 8, 6)` as "the three numbers 4, 8 and 6". One number would do as well, so `mean(4)` returns `4`; the vector is how we hand several values over together. [Vectors in R](vectors-in-r.qmd) covers vectors in full.
 
 Function names are case sensitive, and they need brackets. Type `sqrt` without brackets and R prints the function's code instead of running it. Type `Sqrt(16)` and R says `could not find function "Sqrt"`; the [Errors and Debugging](errors-and-debugging.qmd) chapter covers that message.
 
