@@ -13,7 +13,7 @@
 
 ## Introduction
 
-R began as a calculator, and it is still a good one. Type an expression in the Console, press Enter, and R prints the answer. No assignment, no variable, no package. Everything in this chapter works in the Console, in a script, and in a code chunk like the ones below.
+We can use R as a calculator. Type an expression in the Console, press Enter, and R prints the answer. No assignment, no variable, no package. Everything in this chapter works in the Console, in a script, and in a code chunk like the ones below.
 
 [Variables in R](variables-in-r.qmd) showed you how to store an answer. This chapter shows how the answer is computed.
 
