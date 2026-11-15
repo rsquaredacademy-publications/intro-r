@@ -253,7 +253,16 @@ Three things go into it:
 - the shortest code that fails
 - the output, copied from the Console
 
-The [reprex](https://reprex.tidyverse.org/) package does the formatting for you. `reprex::reprex()` runs your code in a fresh session and copies a plain-text block to the clipboard, ready to paste into a question.
+The [reprex](https://reprex.tidyverse.org/) package does the formatting for you. Install it once with `install.packages("reprex")`, copy the code that shows the problem, then call `reprex::reprex()`. With no argument the function reads the code from the clipboard, runs it in a fresh session and copies a plain-text block back to the clipboard. Paste that block into your question. Leaving out the Markdown fences, the result looks like this:
+
+```
+stores <- c("Bengaluru", "Mumbai", "Delhi")
+stores[[4]]
+#> Error in `stores[[4]]`:
+#> ! subscript out of bounds
+```
+
+Without the package, the same block typed by hand is a reprex: the code, a line with your R version, and the message copied from the Console.
 
 No screenshots, and no "it does not work" without the message. Paste the text, message included.
 
