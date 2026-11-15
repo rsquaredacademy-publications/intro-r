@@ -19,7 +19,7 @@ We can use R as a calculator. Type an expression in the Console, press Enter, an
 
 ## Arithmetic Operators
 
-R uses the symbols you already know for the four basic operations, and two more for powers and remainders.
+R uses the symbols you already know for the four basic operations, plus three more: `^` for powers, `%%` for remainders and `%/%` for integer division.
 
 - `+` adds: `7 + 5` gives `12`
 - `-` subtracts: `7 - 5` gives `2`
