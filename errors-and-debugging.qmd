@@ -24,7 +24,7 @@ price * quantity
 
 The message has two parts:
 
-- `Error` says the code stopped. The lines before it ran; nothing after it did.
+- `Error` says R stopped at this expression. The lines before it ran; the rest of that script did not.
 - `object 'quantity' not found` is the message. R looked for a value named `quantity` and found none.
 
 R sometimes prints the call as well, which is the expression that failed. In a long script, the call is how you find the line.
@@ -197,7 +197,7 @@ count
 
 R has three ways to talk to you, and they mean different things.
 
-An **error** stops the code. Nothing after it runs.
+An **error** stops the code that is running. A sourced script halts at that line, and so does the function that hit it. Your session stays open: the Console takes the next line you type, and a chunk set to `error: true` carries on with its next expression.
 
 A **warning** lets the code finish, then reports something suspicious:
 
