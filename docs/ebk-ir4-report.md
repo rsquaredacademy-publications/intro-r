@@ -93,7 +93,7 @@ Evidence (`Rscript --vanilla`):
 - "- inside `if()` or `while()`, R needs a condition, and `=` there stops with the message above."
 - "So the mistake surfaces only where R expects a condition. A named argument is not an assignment:"
 - chunk `err-equals-named`: `count <- 1` / `sum(count = 12)` / `count`
-- "`sum()` adds the `12` it was given and returns `12`, and `count` is still `1`. When the function has no argument of that name, R reports `unused argument` instead."
+- "`sum()` adds the `12` it was given and returns `12`, and `count` is still `1`. A name the function does not know may give an `unused argument` error, a different error, or be passed on silently, depending on the function, so check its Usage section." (wording corrected after ebk-ir-reaudit R1)
 
 The `if (count = 12)` example and its `==` fix are unchanged.
 
@@ -277,7 +277,7 @@ The timing promise (an hour versus a minute) is gone; both errors-chapter passag
 | 11 | "chapter 3, between Variables and Data Types" | "chapter 4, between Variables and Data Types" |
 | 15 | "chapter 14, after Getting Help" | "chapter 15, after Getting Help" |
 | 25 | "new chapter (12 evaluated chunks, 1 Common Mistake, 3 knowledge checks)" | "new chapter (14 evaluated chunks, 1 Common Mistake, 3 knowledge checks)" |
-| 26 | "new chapter (22 chunks: 12 error demos, 1 warning, 1 message; 3 bug exercises)" | "new chapter (24 chunks: 13 error demos, 1 warning, 1 message; 3 bug exercises)" |
+| 26 | "new chapter (22 chunks: 12 error demos, 1 warning, 1 message; 3 bug exercises)" | "new chapter (24 chunks: 13 error demos, 2 warnings, 1 message; 3 bug exercises)" |
 
 Evidence: the throwaway build numbers Calculator as chapter **4** (`number-offset: 4`) and Errors as **15**; `grep -c '^```{r'` gives **14** chunks in the calculator chapter and **24** in the errors chapter; `grep -c '#| error: true'` over the chunk options gives **13** error demos (a fourteenth hit is prose, not an option, so the count was taken from the option lines only).
 

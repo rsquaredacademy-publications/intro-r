@@ -180,7 +180,7 @@ if (count == 12) print("twelve")
 The trap is that `count = 12` on its own line is valid and assigns silently. The same sign does three different jobs:
 
 - on its own line, `count = 12` assigns, exactly as `count <- 12` does;
-- inside a function call, `name = value` usually names an argument, as in `round(digits = 2)`;
+- inside a function call, `name = value` usually names an argument, as in `round(3.14159, digits = 2)`;
 - inside `if()` or `while()`, R needs a condition, and `=` there stops with the message above.
 
 So the mistake surfaces only where R expects a condition. A named argument is not an assignment:
@@ -191,7 +191,7 @@ sum(count = 12)
 count
 ```
 
-`sum()` adds the `12` it was given and returns `12`, and `count` is still `1`. When the function has no argument of that name, R reports `unused argument` instead.
+`sum()` adds the `12` it was given and returns `12`, and `count` is still `1`. A name the function does not know may give an `unused argument` error, a different error, or be passed on silently, depending on the function, so check its Usage section.
 
 ## Warnings, Errors and Messages
 
@@ -238,7 +238,7 @@ A bug in a 60-line script can hide in any of the 60 lines. The same bug in 3 lin
 2. Find the line. In RStudio, run the script one line at a time until it fails.
 3. Run that line on its own in the Console.
 4. Replace your data with a tiny vector you can print, such as `c(120, 150, 90)`.
-5. Delete half the code and run again. If the error survives, it is in the half that remains. If it does not, it is in the half you removed.
+5. Remove code that the failing line does not need, keeping the data and setup it uses, and run again in a fresh session. If the same error appears, the problem is in what remains. If the error changes or disappears, put the last piece back and look there.
 6. Type the object before the failing line, so you can see what R sees: the wrong type, the wrong length, the wrong names.
 7. Search the message text in quotes, without your variable names.
 8. If you are still stuck, make a reprex and ask.
