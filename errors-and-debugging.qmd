@@ -177,7 +177,21 @@ count <- 12
 if (count == 12) print("twelve")
 ```
 
-The trap is that `count = 12` on its own line is valid and assigns silently. The mistake only surfaces when the line sits inside `if()`, `while()` or a function call.
+The trap is that `count = 12` on its own line is valid and assigns silently. The same sign does three different jobs:
+
+- on its own line, `count = 12` assigns, exactly as `count <- 12` does;
+- inside a function call, `name = value` usually names an argument, as in `round(digits = 2)`;
+- inside `if()` or `while()`, R needs a condition, and `=` there stops with the message above.
+
+So the mistake surfaces only where R expects a condition. A named argument is not an assignment:
+
+```{r err-equals-named}
+count <- 1
+sum(count = 12)
+count
+```
+
+`sum()` adds the `12` it was given and returns `12`, and `count` is still `1`. When the function has no argument of that name, R reports `unused argument` instead.
 
 ## Warnings, Errors and Messages
 
