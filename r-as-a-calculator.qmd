@@ -178,7 +178,7 @@ round(1234, -2)
 
 The first line returns `3`, because you did not ask for decimal places. To keep two places you must pass `2`. The second line returns `1200`, because `digits` can be negative.
 
-This is why we read the Usage section before guessing. `?round` opens the page; the [Getting Help in R](getting-help-in-r.qmd) chapter shows the rest of the page.
+This is why we read the Usage section before guessing. `?round` opens the page; the [Getting Help in R](getting-help-in-r.qmd) chapter shows the other ways to open help and to search it.
 
 ## Nesting Calls
 
