@@ -40,6 +40,7 @@ book:
     - introduction-to-r.qmd
     - install-r-and-rstudio.qmd
     - variables-in-r.qmd
+    - r-as-a-calculator.qmd
     - data-types-in-r.qmd
     - vectors-in-r.qmd
     - data-frames-in-r.qmd
@@ -50,6 +51,7 @@ book:
     - factors-in-r.qmd
     - lists-in-r.qmd
     - getting-help-in-r.qmd
+    - errors-and-debugging.qmd
     - about-the-author.qmd
   appendices:
     - appendix-package-management.qmd

@@ -1,0 +1,9 @@
+## Key points {.unnumbered}
+
+- Read the message before the call: the message says what went wrong, the call says where.
+- Most beginner errors are a typo, a missing bracket, or a missing quote.
+- An error stops the code; a warning lets it finish and reports something suspicious.
+- Shrink the problem: tiny data, one line, half the code at a time.
+- When you ask for help, paste a reprex as text, message included.
+
+**Next:** [About the Author](about-the-author.qmd)

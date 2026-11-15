@@ -1,0 +1,338 @@
+# Errors and Debugging {#sec-errors-and-debugging}
+
+> **Learning Objectives:** After this chapter you will be able to:
+>
+> - Read an error message and find the part that matters.
+> - Recognize the eight errors beginners meet most, and fix each one.
+> - Tell an error from a warning and a message.
+> - Shrink a problem until it is small enough to solve.
+> - Turn your code into a reproducible example.
+
+## Introduction
+
+Sooner or later every R session stops with a message in red. This is normal. An error is R telling you that it reached a line it could not run, and usually why.
+
+The earlier chapters showed code that works. This chapter shows code that fails on purpose, so you can learn to read the message without panic. Every failed chunk below prints what R actually said.
+
+## Anatomy of an Error Message
+
+```{r err-anatomy}
+#| error: true
+price <- 120
+price * quantity
+```
+
+The message has two parts:
+
+- `Error` says R stopped at this expression. The lines before it ran; the rest of that script did not.
+- `object 'quantity' not found` is the message. R looked for a value named `quantity` and found none.
+
+R sometimes prints the call as well, which is the expression that failed. In a long script, the call is how you find the line.
+
+Read the message before the call. The message names the thing that went wrong. The call tells you where. R does not know what you meant, so the message describes what it saw, not what you wanted.
+
+Some errors are caught before any code runs. These are syntax errors, and R points at the character it could not read:
+
+```{r err-parse}
+#| error: true
+2 + * 3
+```
+
+The `^` sits under the `*`. That is the exact place to look. The book's chunks parse the code before running it, so a syntax error here begins with `Error in parse(text = input)`.
+
+## The Eight Errors Beginners Meet Most
+
+### Object Not Found
+
+R has no value under that name. Usually the name is misspelled, or it was created in another session.
+
+```{r err-object}
+#| error: true
+sales <- c(120, 150, 90)
+mean(Sales)
+```
+
+The message is `object 'Sales' not found`, because R is case sensitive and `sales` is not `Sales`.
+
+To check whether a name exists, type it without brackets and press Enter. If R cannot print it, it is not there. Then check the spelling of the line above, which is where the value was created.
+
+### Could Not Find Function
+
+R has no function under that name. Either the name is misspelled, or the package that holds it is not loaded.
+
+```{r err-function}
+#| error: true
+squareroot(16)
+```
+
+The message is `could not find function "squareroot"`. The function is called `sqrt()`.
+
+If the function is real and lives in a package, load the package first with `library()`. Installing a package is not enough; it has to be loaded in every session. The [Install & Update R Packages](install-update-r-packages.qmd) chapter covers the difference.
+
+### Unexpected Symbol or String
+
+Two values or names sit side by side with no operator between them.
+
+```{r err-symbol}
+#| error: true
+count mean(c(120, 150, 90))
+```
+
+The message is `unexpected symbol`, and the `^` points at `mean`. R read `count` as a complete expression and did not expect another word after it.
+
+An unclosed quote gives a variant of the same problem:
+
+```{r err-string}
+#| error: true
+store <- "Bengaluru
+```
+
+The message is `unexpected INCOMPLETE_STRING`. The quote opened text that never closed, so R kept reading to the end of the file looking for the other quote.
+
+To fix either one, put back what is missing: the operator, the comma, or the closing quote. `10 20` gives the close relative `unexpected numeric constant`.
+
+### A Missing Bracket and the `+` Prompt
+
+```{r err-bracket}
+#| error: true
+mean(c(120, 150, 90)
+```
+
+The message is `unexpected end of input`. The position says `<text>:2:0`: line 2, character 0. R ran past the end of the code while still inside a bracket.
+
+In the Console the story looks different. R answers with a `+` instead of an error:
+
+```
+> mean(c(120, 150, 90)
++ 
+```
+
+The `+` is not a prompt for new code. It means R is still waiting for the rest of the line. Press Escape (or Ctrl+C) to cancel, then count the brackets. Every `(` needs a `)`.
+
+### There Is No Package Called X
+
+```{r err-package}
+#| error: true
+library(dpylr)
+```
+
+The message is `there is no package called 'dpylr'`. The package is called **dplyr**, so this is a typo. If the name is right, the package was never installed.
+
+Install it once with `install.packages("dplyr")`, then load it with `library(dplyr)` in each session. The [Install & Update R Packages](install-update-r-packages.qmd) chapter has the full sequence.
+
+### Non-Numeric Argument
+
+The value looks like a number, but R sees text, because it is in quotes. This is the classic import bug.
+
+```{r err-nonnumeric}
+#| error: true
+sqrt("16")
+```
+
+The message is `non-numeric argument to mathematical function`. Arithmetic needs numbers, and `"16"` is a character value.
+
+Convert it when you are sure the text is clean:
+
+```{r err-nonnumeric-fix}
+# text that looks like a number is still text
+sqrt(as.numeric("16"))
+```
+
+If the value arrived from a file, check the column type after import. A column of prices read as text will fail here, and it will also sort and summarise wrongly.
+
+### Subscript Out of Bounds
+
+You asked for a position the object does not have.
+
+```{r err-subscript}
+#| error: true
+stores <- c("Bengaluru", "Mumbai", "Delhi")
+stores[[4]]
+```
+
+The message is `subscript out of bounds`. There are three stores, so position 4 is empty. `length(stores)` tells you how many positions exist.
+
+A single bracket behaves differently, and quietly:
+
+```{r err-subscript-na}
+# a single bracket returns NA instead
+stores[4]
+```
+
+`stores[4]` returns `NA` instead of an error, which is why this bug can travel a long way before you notice it.
+
+### `=` Where You Meant `==`
+
+```{r err-equals}
+#| error: true
+count <- 12
+if (count = 12) print("twelve")
+```
+
+The message is `unexpected '='`. A single `=` assigns a value; `==` compares two values. Inside a condition R needs a comparison.
+
+```{r err-equals-fix}
+# compare, do not assign
+count <- 12
+if (count == 12) print("twelve")
+```
+
+The trap is that `count = 12` on its own line is valid and assigns silently. The same sign does three different jobs:
+
+- on its own line, `count = 12` assigns, exactly as `count <- 12` does;
+- inside a function call, `name = value` usually names an argument, as in `round(3.14159, digits = 2)`;
+- inside `if()` or `while()`, R needs a condition, and `=` there stops with the message above.
+
+So the mistake surfaces only where R expects a condition. A named argument is not an assignment:
+
+```{r err-equals-named}
+count <- 1
+sum(count = 12)
+count
+```
+
+`sum()` adds the `12` it was given and returns `12`, and `count` is still `1`. A name the function does not know may give an `unused argument` error, a different error, or be passed on silently, depending on the function, so check its Usage section.
+
+## Warnings, Errors and Messages
+
+R has three ways to talk to you, and they mean different things.
+
+An **error** stops the code that is running. A sourced script halts at that line, and so does the function that hit it. Your session stays open: the Console takes the next line you type, and a chunk set to `error: true` carries on with its next expression.
+
+A **warning** lets the code finish, then reports something suspicious:
+
+```{r err-warning}
+#| warning: true
+counts <- c("120", "150", "n/a")
+as.numeric(counts)
+```
+
+The warning is `NAs introduced by coercion`. R converted what it could and put `NA` where the text was not a number, then printed the result. It did not store it, so `counts` itself is still text.
+
+That is why `mean(counts)` warns a second time, `argument is not numeric or logical: returning NA`. The default `na.rm = FALSE` is not the cause here, and `na.rm = TRUE` does not help either, because the whole vector is the wrong type. Save the conversion when later code needs the numbers:
+
+```{r err-warning-fix}
+#| warning: true
+numbers <- as.numeric(counts)
+mean(numbers, na.rm = TRUE)
+```
+
+The conversion warning appears again, because `n/a` still cannot become a number. This time the result is stored, so the mean of the good values comes back as `135`.
+
+Treat a warning as a question. Was the conversion intended? If not, fix the data before it spreads.
+
+A **message** is information, not a problem. Packages use it to say what they are doing:
+
+```{r err-message}
+#| message: true
+message("Reading data/stores.csv")
+```
+
+A message does not stop the code and does not mean anything is wrong. This book hides warnings by default to keep the pages short, so you will see more of them in your own Console than in these chapters.
+
+## Shrink the Problem
+
+A bug in a 60-line script can hide in any of the 60 lines. The same bug in 3 lines is easy to find. We shrink the problem first.
+
+1. Read the message twice, then read it again for the words after `Error`.
+2. Find the line. In RStudio, run the script one line at a time until it fails.
+3. Run that line on its own in the Console.
+4. Replace your data with a tiny vector you can print, such as `c(120, 150, 90)`.
+5. Remove code that the failing line does not need, keeping the data and setup it uses, and run again in a fresh session. If the same error appears, the problem is in what remains. If the error changes or disappears, put the last piece back and look there.
+6. Type the object before the failing line, so you can see what R sees: the wrong type, the wrong length, the wrong names.
+7. Search the message text in quotes, without your variable names.
+8. If you are still stuck, make a reprex and ask.
+
+## Make a Reprex
+
+A reprex is a reproducible example: the smallest code that shows the problem, the data it needs, and the exact output, all as plain text. It is the difference between "my code does not work" and a question someone can answer.
+
+Three things go into it:
+
+- the data, small enough to paste: `c("120", "150", "n/a")`
+- the shortest code that fails
+- the output, copied from the Console
+
+The [reprex](https://reprex.tidyverse.org/) package does the formatting for you. Install it once with `install.packages("reprex")`, copy the code that shows the problem, then call `reprex::reprex()`. With no argument the function reads the code from the clipboard, runs it in a fresh session and copies a plain-text block back to the clipboard. Paste that block into your question. Leaving out the Markdown fences, the result looks like this:
+
+```
+stores <- c("Bengaluru", "Mumbai", "Delhi")
+stores[[4]]
+#> Error in `stores[[4]]`:
+#> ! subscript out of bounds
+```
+
+Without the package, the same block typed by hand is a reprex: the code, a line with your R version, and the message copied from the Console.
+
+We send no screenshots, and no "it does not work" without the message. We paste the text, message included.
+
+## Find the Bug
+
+**Bug 1.** The shop gives 15% off a price of 200. This code runs without an error. What is wrong?
+
+```{r bug1}
+discount <- 0.15
+price <- 200
+price * 1 - discount
+```
+
+<details>
+<summary>Click to reveal the bug and the fix</summary>
+
+**Bug:** the code subtracts the discount rate from the price. The result is `199.85`, not `170`. R does not complain, because the arithmetic is valid; the answer is just wrong.
+
+**Fix:** multiply the price by what the customer pays:
+
+```{r bug1-fix}
+price * (1 - discount)
+```
+
+This is the most dangerous kind of bug, because nothing turns red. Print the numbers and check them against a hand calculation.
+</details>
+
+**Bug 2.** This code should show the count for the fifth day. What is wrong?
+
+```{r bug2}
+#| error: true
+daily_counts <- c(140, 160, 155, 170)
+daily_counts[[5]]
+```
+
+<details>
+<summary>Click to reveal the bug and the fix</summary>
+
+**Bug:** position 5 does not exist, because the vector has four values. `subscript out of bounds`.
+
+**Fix:** there is no fifth day, so ask for one that exists:
+
+```{r bug2-fix}
+daily_counts[4]
+```
+
+When a position comes from a variable or a count, check it against `length()` first.
+</details>
+
+**Bug 3.** This code should print `"opening time"` when the hour is 9. What is wrong?
+
+```{r bug3}
+#| error: true
+hour <- 9
+if (hour = 9) print("opening time")
+```
+
+<details>
+<summary>Click to reveal the bug and the fix</summary>
+
+**Bug:** the condition uses `=`, which assigns. R needs a comparison, and stops with `unexpected '='`.
+
+**Fix:** use `==`:
+
+```{r bug3-fix}
+hour <- 9
+if (hour == 9) print("opening time")
+```
+
+Remember the pair: `=` sets a value, `==` asks a question.
+</details>
+
+{{< include _includes/chapter-footer/errors-and-debugging.qmd >}}

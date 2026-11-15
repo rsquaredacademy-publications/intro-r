@@ -1,0 +1,273 @@
+# R as a Calculator and Using Functions {#sec-r-as-a-calculator}
+
+> [Practise this interactively in Course 1 (Introduction to R), lessons 1 and 5]({{< var course1_url >}})
+
+> **Learning Objectives:** After this chapter you will be able to:
+>
+> - Use `+`, `-`, `*`, `/`, `^`, `%%` and `%/%`.
+> - Read an expression in the right order, and use brackets to change it.
+> - Call a function such as `round()`, `sqrt()` or `mean()`.
+> - Pass arguments by position or by name, and rely on a default.
+> - Read the Usage section of a help page.
+> - Nest one call inside another, and know when a variable is clearer.
+
+## Introduction
+
+We can use R as a calculator. Type an expression in the Console, press Enter, and R prints the answer. No assignment, no variable, no package. Everything in this chapter works in the Console, in a script, and in a code chunk like the ones below.
+
+[Variables in R](variables-in-r.qmd) showed you how to store an answer. This chapter shows how the answer is computed.
+
+## Arithmetic Operators
+
+R uses the symbols you already know for the four basic operations, plus three more: `^` for powers, `%%` for remainders and `%/%` for integer division.
+
+- `+` adds: `7 + 5` gives `12`
+- `-` subtracts: `7 - 5` gives `2`
+- `*` multiplies: `7 * 5` gives `35`
+- `/` divides: `7 / 5` gives `1.4`
+- `^` raises to a power: `7^2` gives `49`
+- `%%` gives the remainder after division
+- `%/%` divides and rounds down to a whole number
+
+Let us start with the first five:
+
+```{r calc1}
+# add, subtract, multiply, divide
+7 + 5
+7 - 5
+7 * 5
+7 / 5
+
+# raise to a power
+7^2
+```
+
+The `[1]` at the start of each line is not part of the answer. It is the position of the first value in the output. Ignore it when you compare your answer with the book.
+
+The other two operators look odd, but they answer common questions:
+
+```{r calc2}
+# remainder after division
+7 %% 2
+
+# number of whole times 2 fits into 7
+7 %/% 2
+```
+
+`/` does not round. `7 / 5` keeps the decimals, while `%/%` returns a whole number.
+
+`7 %% 2` is `1`, because 2 goes into 7 three times and 1 is left over. `7 %/% 2` is `3`, because 2 fits three whole times. The two answers fit together: `3 * 2 + 1` is back to `7`.
+
+`%/%` rounds down rather than towards zero, so negative numbers behave differently: `-7 %/% 2` is `-4`, because `-3.5` rounds down to `-4`. Keep both values positive while you are learning the operator.
+
+Use `%%` to test whether a number is even (`x %% 2 == 0`) or to group values into buckets. Use `%/%` when you want complete groups, such as full boxes of twelve.
+
+## Precedence and Brackets
+
+R evaluates an expression in a fixed order: brackets first, then powers, then `%%` and `%/%`, then multiplication and division, then addition and subtraction.
+
+```{r calc3}
+# multiplication before addition
+2 + 3 * 4
+
+# brackets first
+(2 + 3) * 4
+
+# powers are evaluated right to left
+2^3^2
+
+# a minus sign does not belong to the power
+-3^2
+```
+
+`2 + 3 * 4` is `14`, not `20`, because `3 * 4` is computed first. Brackets change the order: `(2 + 3) * 4` is `20`.
+
+`2^3^2` is `2` raised to the power `3^2`, which is `512`. Powers run right to left.
+
+The minus sign in `-3^2` applies after the power, so the answer is `-9`. Write `(-3)^2` when you want `9`.
+
+Multiplication and division have the same rank, and R works from left to right. `12 / 4 * 3` is `9`, not `1`, because the division happens first.
+
+`%%` and `%/%` rank above `*` and `/`, which is easy to miss:
+
+```{r calc2-order}
+# %/% runs before *
+2 * 3 %/% 2
+
+# brackets change which step runs first
+(2 * 3) %/% 2
+```
+
+`2 * 3 %/% 2` is `2`, because `3 %/% 2` is computed first and gives `1`; then `2 * 1` is `2`. With the brackets, `6 %/% 2` gives `3`. The same trap catches `10 / 3 %/% 2`, which is `10`, not `1`.
+
+When you are unsure, add brackets. They cost nothing, and they show the next reader what you meant.
+
+## Calling Functions
+
+A function takes input, does a job and returns a value. You call it by writing its name followed by brackets, with the input inside the brackets. The input is called an argument.
+
+```{r calc4}
+# round to two decimal places
+round(3.14159, 2)
+
+# square root
+sqrt(16)
+
+# the average of three numbers
+mean(c(4, 8, 6))
+```
+
+`round()` keeps two decimal places, `sqrt()` returns the square root, and `mean()` returns the average. In the third line we give `mean()` three numbers at once, in a vector built with `c()`. Read `c(4, 8, 6)` as "the three numbers 4, 8 and 6". One number would do as well, so `mean(4)` returns `4`; the vector is how we hand several values over together. [Vectors in R](vectors-in-r.qmd) covers vectors in full.
+
+Function names are case sensitive, and they need brackets. Type `sqrt` without brackets and R prints the function's code instead of running it. Type `Sqrt(16)` and R says `could not find function "Sqrt"`; the [Errors and Debugging](errors-and-debugging.qmd) chapter covers that message.
+
+Some values are not functions. R already has `pi`, so you use it without brackets:
+
+```{r calc5}
+# pi is a value, not a function
+pi * 3^2
+```
+
+That is the area of a circle with radius 3, and it agrees with the `pi * radius^2` calculation in the previous chapter.
+
+## Arguments by Position and by Name
+
+`round()` takes the number to round and the number of decimal places. You can pass them in order, or name them.
+
+```{r calc6}
+# by position
+round(3.14159, 2)
+
+# by name
+round(x = 3.14159, digits = 2)
+
+# by name, in either order
+round(digits = 2, x = 3.14159)
+```
+
+All three lines return `3.14`. Position matters only when you leave the names out. Put the number first and R assumes it is `x`.
+
+Names make a call easier to read, and they let us skip an argument in the middle. A call with four unnamed numbers is a puzzle; the same call with names is a sentence.
+
+## Defaults and the Usage Section
+
+Most arguments have a default, and the rest must be supplied. The help page tells you which is which. The Usage section near the top of every help page lists the arguments in the order R expects them, and shows the defaults.
+
+```{r calc7}
+args(round)
+```
+
+`function (x, digits = 0, ...)` says that `round()` expects `x`, and will use `digits = 0` if you say nothing. The help page prints the same information in a friendlier layout:
+
+```
+round(x, digits = 0, ...)
+signif(x, digits = 6)
+```
+
+The `...` means the function accepts other arguments as well. Ignore it for now.
+
+`digits = 0` explains two things:
+
+```{r calc8}
+# digits defaults to 0
+round(3.14159)
+
+# negative digits round to a power of ten
+round(1234, -2)
+```
+
+The first line returns `3`, because you did not ask for decimal places. To keep two places you must pass `2`. The second line returns `1200`, because `digits` can be negative.
+
+This is why we read the Usage section before guessing. `?round` opens the page; the [Getting Help in R](getting-help-in-r.qmd) chapter shows the other ways to open help and to search it.
+
+## Nesting Calls
+
+R computes from the inside out. When one call sits inside another, the inner call runs first.
+
+```{r calc9}
+# square root of 2, rounded to three places
+round(sqrt(2), 3)
+```
+
+`sqrt(2)` runs first and gives `1.414214`. `round()` then keeps three places and returns `1.414`. Read a nested call from the inside out, the same way you read brackets in arithmetic.
+
+Two calls nested are easy to follow. Four are not:
+
+```{r calc10}
+# hard to read at a glance
+round(mean(c(4, 8, 6)) / sqrt(16), 2)
+```
+
+A variable for each step is clearer:
+
+```{r calc11}
+# the same calculation, one step at a time
+average <- mean(c(4, 8, 6))
+root <- sqrt(16)
+round(average / root, 2)
+```
+
+Both versions return `1.5`. The second names its parts, so you can check each one. Use a variable when a call would run past the end of the line, or when you want to inspect a middle step. Keep the nested form when it reads like a sentence, as `round(sqrt(2), 3)` does.
+
+Order matters inside a nest, and the wrong order still returns a number:
+
+```{r calc11-order}
+# round each value, then average
+mean(round(c(2.4, 3.4)))
+
+# average, then round
+round(mean(c(2.4, 3.4)))
+```
+
+> **Common Mistake:** The first line rounds each value before averaging, so `2.4` becomes `2` and `3.4` becomes `3`; the answer is `2.5`. If you wanted the average rounded to a whole number, the second line is the one you meant, and it returns `3`. Read a nested call from the inside out before you trust the answer.
+
+## Missing Values
+
+One missing value makes `mean()` return `NA`, no matter how many good values sit beside it.
+
+```{r calc12}
+# one missing value is enough
+mean(c(4, 8, 6, NA))
+
+# drop missing values first
+mean(c(4, 8, 6, NA), na.rm = TRUE)
+```
+
+`na.rm` is another argument, with a default of `FALSE`, which is why the first line returns `NA`. Set it to `TRUE` and the average of the remaining values comes back. The [Vectors in R](vectors-in-r.qmd#exclude-missing-data) chapter covers missing values in detail.
+
+## Practice Check
+
+**Knowledge Check:** *Order of operations*
+What does `2 + 3 * 4^2` return, and why?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:** `50`.
+
+*Explanation:* the power runs first (`4^2` is `16`), then the multiplication (`3 * 16` is `48`), then the addition (`2 + 48` is `50`).
+</details>
+
+**Knowledge Check:** *Reading a call*
+What does `round(mean(c(2, 4, 6)), 1)` return?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:** `4`.
+
+*Explanation:* the inner call runs first. `mean(c(2, 4, 6))` is `4`, and `round(4, 1)` leaves it at `4`.
+</details>
+
+**Knowledge Check:** *Name the arguments*
+Rewrite `round(3.14159, 2)` with both arguments named, then swap their order. Does the answer change?
+
+<details>
+<summary>Click to reveal answer</summary>
+
+**Answer:** `round(x = 3.14159, digits = 2)` and `round(digits = 2, x = 3.14159)` both return `3.14`.
+
+*Explanation:* names tell R which argument is which, so order stops mattering. Unnamed arguments are matched by position.
+</details>
+
+{{< include _includes/chapter-footer/r-as-a-calculator.qmd >}}

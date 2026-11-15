@@ -20,7 +20,7 @@ In the previous chapter, we learned to install RStudio. In this chapter, we will
 - they represent values that are likely to change
 - they reference memory locations that store data
 
-Let us use a simple case study to understand variables. Suppose you are computing the area of a circle whose radius is 3. In R, you can do this straight away as shown below:
+Let us use a simple case study to understand variables. Suppose you are computing the area of a circle whose radius is 3. In R, you can do this straight away as shown below. The [next chapter](r-as-a-calculator.qmd) covers the operators and functions behind the calculation in detail; here we only need the answer.
 
 ```{r var1}
 3.14 * 3 * 3
